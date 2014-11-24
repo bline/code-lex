@@ -12,9 +12,17 @@ lib-cov
 
 # Coverage directory used by tools like istanbul
 coverage
+.coverrun
+.coverdata
+
+# debugging
+debug
 
 # Grunt intermediate storage (http://gruntjs.com/creating-plugins#storing-task-files)
 .grunt
+
+# cloud9
+.c9
 
 # Compiled binary addons (http://nodejs.org/api/addons.html)
 build/Release
