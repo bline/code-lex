@@ -27,7 +27,7 @@
         pattern: ['./lib/**/*.js'],
         debugDirectory: 'debug'}))
       .pipe($.plumber())
-      .pipe($.mocha({reporter: 'dot'})
+      .pipe($.mocha({reporter: 'spec'})
             .on('error', function (err) { console.log("test error: " + err); this.emit('end'); })) // test errors dropped
       .pipe($.plumber.stop())
       .pipe($.coverage.gather())
@@ -44,7 +44,7 @@
       .pipe($.jshint.reporter(require('jshint-table-reporter')));
   });
 
-  gulp.task('test', function () {
+  gulp.task('test', ['lint'], function () {
     return gulp.src(testSrc, {read: false})
       .pipe($.plumber())
       .pipe($.mocha({reporter: 'spec'}).on('error', function (err) { console.log("test error: " + err); this.emit('end'); })) // test errors dropped
@@ -56,7 +56,7 @@
   });
   gulp.task('coverage', ['lint'], function () {
     return runCoverage({outFile: './index.html'})
-      .pipe($.tap(function (file) {
+      /*.pipe($.tap(function (file) {
         file.contents = new Buffer(
           file
             .contents
@@ -69,7 +69,7 @@
         if (tinyLrServer) {
           tinyLrServer.changed({body: { files : file.path }});
         }
-      }))
+      }))*/
       .pipe(gulp.dest('coverage'));
   });
   gulp.task('connect-coverage', ['coverage'], function () {
@@ -93,8 +93,8 @@
     });
   });
   gulp.task('watch', function () {
-    gulp.watch([lintSrc], ['coverage']);
+    gulp.watch([lintSrc], ['test']);
   });
 
-  gulp.task("default", ['coverage', 'connect-coverage', "watch"]);
+  gulp.task("default", ['test', "watch"]);
 })();
