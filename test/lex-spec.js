@@ -97,6 +97,30 @@
         this.lex.yytext.should.be.equal('bar');
         this.lex.lex().should.be.equal(false);
       });
+      it("should allow string token as action return", function () {
+        this.lex.setRule(
+          this.clex.rule('foo', /foo/).action(function () {
+            return 'foo';
+          })
+        );
+        this.lex.setSource('foo').setState('foo');
+        this.lex.lex().should.be.equal('foo');
+        this.lex.lex().should.be.equal(false);
+      });
+      it("should allow namespace disable", function () {
+        this.lex.setRule(
+          this.clex.rule('root', function (rule) {
+            rule('foo', /foo/).action(function () {
+              return ['foo', 'bar'];
+            });
+          })
+        );
+        this.lex.options({disableNS: true});
+        this.lex.setSource('foo').setState('root.foo');
+        this.lex.lex().should.be.equal('foo');
+        this.lex.lex().should.be.equal('bar');
+        this.lex.lex().should.be.equal(false);
+      });
       it("should allow multiple array of tokens from action", function () {
         this.lex.setRule(
           this.clex.rule('root', function (rule) {
@@ -109,6 +133,31 @@
         this.lex.lex().should.be.equal('root.foo');
         this.lex.lex().should.be.equal('root.foo.bar');
         this.lex.lex().should.be.equal('root.foo.baz');
+        this.lex.lex().should.be.equal(false);
+      });
+      it("should go to next match with no tokens", function () {
+        this.lex.setRule(this.clex.rule(function (rule) {
+          rule('foo', /foo/).action(function () {
+            return [];
+          });
+          rule('bar', /bar/);
+        }));
+        this.lex.setSource('foobar');
+        this.lex.lex().should.be.equal('bar');
+        this.lex.lex().should.be.equal(false);
+      });
+      it("should go to next match with no tokens and zero width match", function () {
+        this.lex.setRule(this.clex.rule(function (rule) {
+          rule('startWithSpace', /^\s*/).action(function () {
+            return [];
+          });
+          rule('foo', /foo/);
+        }));
+        this.lex.setState('.').setSource('foo');
+        this.lex.lex().should.be.equal('foo');
+        this.lex.lex().should.be.equal(false);
+        this.lex.setState('.').setSource(' foo');
+        this.lex.lex().should.be.equal('foo');
         this.lex.lex().should.be.equal(false);
       });
       it("should allow state set", function () {
