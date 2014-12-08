@@ -43,12 +43,12 @@ var jsRule = rule('js', function (rule) {
     rule('es6TemplateEnd', /`/)
       .action(function () {
         this.setState('js.initial');
-        return lexer.defaultAction.apply(lexer, arguments);
+        return rule.defaultAction.apply(rule, arguments);
       });
     rule('es6TemplateEvalStart', /\${/)
       .action(function () {
         this.pushState('js.es6TemplateEval');
-        return lexer.defaultAction.apply(lexer, arguments);
+        return rule.defaultAction.apply(rule, arguments);
       });
   });
   rule('es6TemplateEval', ['main', 'es6TemplateEvalEnd', 'end']);
@@ -58,7 +58,7 @@ var jsRule = rule('js', function (rule) {
         var ns = this.popState();
         if (ns !== 'js.es6TemplateEval')
           this.handleError(new clex.Lex.LexError('invalid close'_);
-        return lexer.defaultAction.apply(lexer, arguments);
+        return rule.defaultAction.apply(rule, arguments);
       });
   });
   rule.action(function () {

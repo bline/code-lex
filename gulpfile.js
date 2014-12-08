@@ -7,22 +7,40 @@
  /* jshint debug: true, strict: true */
 (function () {
   'use strict';
-  var gulp = require('gulp');
-  var $ = require('gulp-load-plugins')();
-  var del = require('del');
-  var path = require("path");
-  var Buffer = require("buffer").Buffer;
-  var pkg = require("./package.json");
-  var tinylr = require("tiny-lr");
+  var gulp = require('gulp'),
+     gutil = require('gulp-util'),
+         $ = require('gulp-load-plugins')(),
+       del = require('del'),
+      path = require("path"),
+      exec = require('child_process').exec,
+       pkg = require("./package.json"),
+    tinylr = require("tiny-lr");
+
   var c9WSHost = (pkg.c9.appName || pkg.name) + '-' + pkg.c9.user + '.c9.io';
   var c9Url = 'https://' + (pkg.c9.appName || pkg.name) + '-' + pkg.c9.user + '.c9.io';
   var livereloadUrl = c9Url + '/livereload.js?host=' + c9WSHost + '&port=443';
-  var lintSrc = ['./gulpfile.js', './index.js', './lib/**/*.js', 'test/**/*.js', 'bin/*.js'];
-  var testSrc = ['test/*helper.js', 'test/*spec.js'];
+  var files = {
+    docsDest: path.join(process.cwd(), '/docs/dex/' + pkg.version),
+    lintSrc: ['./gulpfile.js', './index.js', './lib/**/*.js', 'test/**/*.js', 'bin/*.js'],
+    testSrc: ['test/*helper.js', 'test/*spec.js']
+  };
+  var options = {
+    jsdoc: {
+      cmd: [
+        require.resolve('jsdoc/jsdoc.js'),
+        '--configure ./config/jsdoc.json',
+        '--verbose',
+        '--pedantic',
+        '--readme ./README.md',
+        '--package ./package.json',
+        '--destination ./docs'
+      ]
+    }
+  };
   var tinyLrServer;
 
   function runCoverage (opts) {
-    return gulp.src(testSrc, { read: false })
+    return gulp.src(files.testSrc, { read: false })
       .pipe($.coverage.instrument({
         pattern: ['./lib/**/*.js'],
         debugDirectory: 'debug'}))
@@ -38,14 +56,33 @@
     del(["coverage/**/*", "coverage", "debug/**/*", "debug"], done);
   });
 
+  gulp.task('clean-docs', function (done) {
+    del(['./docs/**/*'], done);
+  });
   gulp.task("lint", function () {
-    return gulp.src(lintSrc)
+    return gulp.src(files.lintSrc)
       .pipe($.jshint())
       .pipe($.jshint.reporter(require('jshint-table-reporter')));
   });
 
+  gulp.task('docs', ['clean-docs'], function (done) {
+    exec(options.jsdoc.cmd.join(' '), function (err, stdout, stderr) {
+      gutil.log(stdout);
+      gutil.log(stderr);
+      if (err) return done(err);
+      gulp.src('favicon.ico')
+        .pipe(gulp.dest(files.docsDest))
+        .on('end', done);
+    });
+  });
+  gulp.task('publish-docs', ['docs'], function () {
+    return gulp.src('./docs/dex/**/*', {
+        base: files.docsDest
+      })
+      .pipe($.ghPages());
+  });
   gulp.task('test', ['lint'], function () {
-    return gulp.src(testSrc, {read: false})
+    return gulp.src(files.testSrc, {read: false})
       .pipe($.plumber())
       .pipe($.mocha({reporter: 'spec'}).on('error', function (err) { console.log("test error: " + err); this.emit('end'); })) // test errors dropped
       .pipe($.plumber.stop());
@@ -93,7 +130,7 @@
     });
   });
   gulp.task('watch', function () {
-    gulp.watch([lintSrc], ['test']);
+    gulp.watch([files.lintSrc], ['test']);
   });
 
   gulp.task("default", ['test', "watch"]);
