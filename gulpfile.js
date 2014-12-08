@@ -19,9 +19,9 @@
   var c9WSHost = (pkg.c9.appName || pkg.name) + '-' + pkg.c9.user + '.c9.io';
   var c9Url = 'https://' + (pkg.c9.appName || pkg.name) + '-' + pkg.c9.user + '.c9.io';
   var livereloadUrl = c9Url + '/livereload.js?host=' + c9WSHost + '&port=443';
-  var files = {
+  var paths = {
     docsDest: path.join(process.cwd(), '/docs/dex/' + pkg.version),
-    lintSrc: ['./gulpfile.js', './index.js', './lib/**/*.js', 'test/**/*.js', 'bin/*.js'],
+    lintSrc: ['gulpfile.js', 'index.js', 'lib/**/*.js', 'test/**/*.js'],
     testSrc: ['test/*helper.js', 'test/*spec.js']
   };
   var options = {
@@ -40,7 +40,7 @@
   var tinyLrServer;
 
   function runCoverage (opts) {
-    return gulp.src(files.testSrc, { read: false })
+    return gulp.src(paths.testSrc, { read: false })
       .pipe($.coverage.instrument({
         pattern: ['./lib/**/*.js'],
         debugDirectory: 'debug'}))
@@ -60,7 +60,7 @@
     del(['./docs/**/*'], done);
   });
   gulp.task("lint", function () {
-    return gulp.src(files.lintSrc)
+    return gulp.src(paths.lintSrc)
       .pipe($.jshint())
       .pipe($.jshint.reporter(require('jshint-table-reporter')));
   });
@@ -71,18 +71,18 @@
       gutil.log(stderr);
       if (err) return done(err);
       gulp.src('favicon.ico')
-        .pipe(gulp.dest(files.docsDest))
+        .pipe(gulp.dest(paths.docsDest))
         .on('end', done);
     });
   });
   gulp.task('publish-docs', ['docs'], function () {
     return gulp.src('./docs/dex/**/*', {
-        base: files.docsDest
+        base: paths.docsDest
       })
       .pipe($.ghPages());
   });
   gulp.task('test', ['lint'], function () {
-    return gulp.src(files.testSrc, {read: false})
+    return gulp.src(paths.testSrc, {read: false})
       .pipe($.plumber())
       .pipe($.mocha({reporter: 'spec'}).on('error', function (err) { console.log("test error: " + err); this.emit('end'); })) // test errors dropped
       .pipe($.plumber.stop());
@@ -93,44 +93,13 @@
   });
   gulp.task('coverage', ['lint'], function () {
     return runCoverage({outFile: './index.html'})
-      /*.pipe($.tap(function (file) {
-        file.contents = new Buffer(
-          file
-            .contents
-            .toString()
-            .replace(
-              /<\/\s*body\s*>\s*(?:<\s*\/html\s*>)?\s*$/,
-              '<script src="' + livereloadUrl + '"></script></body></html>'
-            )
-        );
-        if (tinyLrServer) {
-          tinyLrServer.changed({body: { files : file.path }});
-        }
-      }))*/
       .pipe(gulp.dest('coverage'));
   });
-  gulp.task('connect-coverage', ['coverage'], function () {
-    $.connect.server({
-      root: 'coverage',
-      noServer: true,
-      https: false,
-      port: process.env.PORT,
-      host: process.env.IP,
-      livereload: { port: process.env.PORT, src: livereloadUrl },
-      middleware: function (connect, opt) {
-        tinyLrServer = tinylr({app: connect});
-        return [
-          connect.static(path.join(__dirname, 'coverage')),
-          function (req, res, next) {
-            console.log("in tinylr request");
-            tinyLrServer.handle(req, res, next);
-          }
-        ];
-      }
-    });
+  gulp.task('watch-coverage', function () {
+    gulp.watch(paths.lintSrc, ['coverage']);
   });
   gulp.task('watch', function () {
-    gulp.watch([files.lintSrc], ['test']);
+    gulp.watch(paths.lintSrc, ['test']);
   });
 
   gulp.task("default", ['test', "watch"]);
