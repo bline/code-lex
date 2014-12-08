@@ -1,0 +1,35 @@
+{
+  "source": {
+    "include": ["README.md", "index.js", "lib/index.js", "lib/rule.js", "lib/retool.js"]
+  },
+  "tags": {
+    "allowUnknownTags": true
+  },
+  "plugins": ["plugins/markdown"],
+  "templates": {
+    "cleverLinks": false,
+    "monospaceLinks": false,
+    "applicationName": "Dex",
+    "disqus": "",
+    "googleAnalytics": "",
+    "openGraph": {
+        "title": "",
+        "type": "website",
+        "image": "",
+        "site_name": "",
+        "url": ""
+    },
+    "meta": {
+        "title": "Dex",
+        "description": "named regular expression alternation for tokenizers",
+        "keyword": "RegExp,regex,lexer,tokenizer"
+    },
+    "linenums": true
+  },
+  "markdown": {
+    "parser": "gfm"
+  },
+  "opts": {
+    "template": "./node_modules/jaguarjs-jsdoc"
+  }
+}
