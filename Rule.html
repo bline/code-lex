@@ -1,0 +1,4431 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Dex</title>
+    
+    <meta name="description" content="named regular expression alternation for tokenizers" />
+    
+        <meta name="keywords" content="RegExp,regex,lexer,tokenizer" />
+        <meta name="keyword" content="RegExp,regex,lexer,tokenizer" />
+    
+    
+    
+    <meta property="og:title" content=""/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:image" content=""/>
+    
+    <meta property="og:url" content=""/>
+    
+    <script src="scripts/prettify/prettify.js"></script>
+    <script src="scripts/prettify/lang-css.js"></script>
+    <script src="scripts/jquery.min.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/bootstrap.min.css">
+    <link type="text/css" rel="stylesheet" href="styles/jaguar.css">
+    
+    
+    <script>
+    var config = {"monospaceLinks":false,"cleverLinks":false,"applicationName":"Dex","disqus":"","googleAnalytics":"","openGraph":{"title":"","type":"website","image":"","site_name":"","url":""},"meta":{"title":"Dex","description":"named regular expression alternation for tokenizers","keyword":"RegExp,regex,lexer,tokenizer"},"linenums":true,"default":{}};
+    </script>
+    
+
+    
+</head>
+<body>
+<div id="wrap" class="clearfix">
+    
+<div class="navigation">
+    <h3 class="applicationName"><a href="index.html">Dex</a></h3>
+
+    <div class="search">
+        <input id="search" type="text" class="form-control input-sm" placeholder="Search Documentations">
+    </div>
+    <ul class="list">
+    
+        <li class="item" data-name="Lex">
+            <span class="title">
+                <a href="Lex.html">Lex</a>
+                
+            </span>
+            <ul class="members itemMembers">
+            
+            <span class="subtitle">Members</span>
+            
+                <li data-name="Lex.defaultOptions"><a href="Lex.html#defaultOptions">defaultOptions</a></li>
+            
+                <li data-name="Lex#index"><a href="Lex.html#index">index</a></li>
+            
+                <li data-name="Lex#source"><a href="Lex.html#source">source</a></li>
+            
+                <li data-name="Lex#tokens"><a href="Lex.html#tokens">tokens</a></li>
+            
+            </ul>
+            <ul class="typedefs itemMembers">
+            
+            <span class="subtitle">Typedefs</span>
+            
+                <li data-name="Lex~ActionCallback"><a href="Lex.html#ActionCallback">ActionCallback</a></li>
+            
+                <li data-name="Lex~ErrorCallback"><a href="Lex.html#ErrorCallback">ErrorCallback</a></li>
+            
+                <li data-name="Lex~Options"><a href="Lex.html#Options">Options</a></li>
+            
+                <li data-name="Lex~State"><a href="Lex.html#State">State</a></li>
+            
+            </ul>
+            <ul class="methods itemMembers">
+            
+            <span class="subtitle">Methods</span>
+            
+                <li data-name="Lex.handleError"><a href="Lex.html#handleError">handleError</a></li>
+            
+                <li data-name="Lex#addState"><a href="Lex.html#addState">addState</a></li>
+            
+                <li data-name="Lex#currentState"><a href="Lex.html#currentState">currentState</a></li>
+            
+                <li data-name="Lex#getCurrentColumn"><a href="Lex.html#getCurrentColumn">getCurrentColumn</a></li>
+            
+                <li data-name="Lex#getCurrentLine"><a href="Lex.html#getCurrentLine">getCurrentLine</a></li>
+            
+                <li data-name="Lex#lex"><a href="Lex.html#lex">lex</a></li>
+            
+                <li data-name="Lex#newError"><a href="Lex.html#newError">newError</a></li>
+            
+                <li data-name="Lex#options"><a href="Lex.html#options">options</a></li>
+            
+                <li data-name="Lex#popState"><a href="Lex.html#popState">popState</a></li>
+            
+                <li data-name="Lex#pushState"><a href="Lex.html#pushState">pushState</a></li>
+            
+                <li data-name="Lex#resolveNS"><a href="Lex.html#resolveNS">resolveNS</a></li>
+            
+                <li data-name="Lex#resolveSiblingNS"><a href="Lex.html#resolveSiblingNS">resolveSiblingNS</a></li>
+            
+                <li data-name="Lex#setRule"><a href="Lex.html#setRule">setRule</a></li>
+            
+                <li data-name="Lex#setSource"><a href="Lex.html#setSource">setSource</a></li>
+            
+                <li data-name="Lex#setState"><a href="Lex.html#setState">setState</a></li>
+            
+            </ul>
+            <ul class="events itemMembers">
+            
+            </ul>
+        </li>
+    
+        <li class="item" data-name="Lex.LexError">
+            <span class="title">
+                <a href="Lex.LexError.html">Lex.LexError</a>
+                
+            </span>
+            <ul class="members itemMembers">
+            
+            </ul>
+            <ul class="typedefs itemMembers">
+            
+            </ul>
+            <ul class="methods itemMembers">
+            
+            </ul>
+            <ul class="events itemMembers">
+            
+            </ul>
+        </li>
+    
+        <li class="item" data-name="Rule">
+            <span class="title">
+                <a href="Rule.html">Rule</a>
+                
+            </span>
+            <ul class="members itemMembers">
+            
+            <span class="subtitle">Members</span>
+            
+                <li data-name="Rule.create"><a href="Rule.html#create">create</a></li>
+            
+                <li data-name="Rule.defaultOptions"><a href="Rule.html#defaultOptions">defaultOptions</a></li>
+            
+                <li data-name="Rule.registerMatch"><a href="Rule.html#registerMatch">registerMatch</a></li>
+            
+                <li data-name="Rule.ReMix"><a href="Rule.html#ReMix">ReMix</a></li>
+            
+                <li data-name="Rule#actions"><a href="Rule.html#actions">actions</a></li>
+            
+                <li data-name="Rule#matcher"><a href="Rule.html#matcher">matcher</a></li>
+            
+                <li data-name="Rule#matches"><a href="Rule.html#matches">matches</a></li>
+            
+                <li data-name="Rule#tokens"><a href="Rule.html#tokens">tokens</a></li>
+            
+            </ul>
+            <ul class="typedefs itemMembers">
+            
+            <span class="subtitle">Typedefs</span>
+            
+                <li data-name="Rule~Argument"><a href="Rule.html#Argument">Argument</a></li>
+            
+                <li data-name="Rule~Composition"><a href="Rule.html#Composition">Composition</a></li>
+            
+                <li data-name="Rule~ErrorCallback"><a href="Rule.html#ErrorCallback">ErrorCallback</a></li>
+            
+                <li data-name="Rule~Options"><a href="Rule.html#Options">Options</a></li>
+            
+                <li data-name="Rule~SetupCallback"><a href="Rule.html#SetupCallback">SetupCallback</a></li>
+            
+                <li data-name="Rule~Token"><a href="Rule.html#Token">Token</a></li>
+            
+                <li data-name="Rule~Type"><a href="Rule.html#Type">Type</a></li>
+            
+                <li data-name="Rule~TypeAPI"><a href="Rule.html#TypeAPI">TypeAPI</a></li>
+            
+                <li data-name="Rule~TypeCreateCallback"><a href="Rule.html#TypeCreateCallback">TypeCreateCallback</a></li>
+            
+            </ul>
+            <ul class="methods itemMembers">
+            
+            <span class="subtitle">Methods</span>
+            
+                <li data-name="Rule.defaultAction"><a href="Rule.html#defaultAction">defaultAction</a></li>
+            
+                <li data-name="Rule.handleError"><a href="Rule.html#handleError">handleError</a></li>
+            
+                <li data-name="Rule.registerType"><a href="Rule.html#registerType">registerType</a></li>
+            
+                <li data-name="Rule.type"><a href="Rule.html#type">type</a></li>
+            
+                <li data-name="Rule#action"><a href="Rule.html#action">action</a></li>
+            
+                <li data-name="Rule#compose"><a href="Rule.html#compose">compose</a></li>
+            
+                <li data-name="Rule#dump"><a href="Rule.html#dump">dump</a></li>
+            
+                <li data-name="Rule#exclusive"><a href="Rule.html#exclusive">exclusive</a></li>
+            
+                <li data-name="Rule#forEach"><a href="Rule.html#forEach">forEach</a></li>
+            
+                <li data-name="Rule#getOption"><a href="Rule.html#getOption">getOption</a></li>
+            
+                <li data-name="Rule#match"><a href="Rule.html#match">match</a></li>
+            
+                <li data-name="Rule#options"><a href="Rule.html#options">options</a></li>
+            
+                <li data-name="Rule#parent"><a href="Rule.html#parent">parent</a></li>
+            
+                <li data-name="Rule#pushAction"><a href="Rule.html#pushAction">pushAction</a></li>
+            
+                <li data-name="Rule#resolveNS"><a href="Rule.html#resolveNS">resolveNS</a></li>
+            
+                <li data-name="Rule#resolveParentNS"><a href="Rule.html#resolveParentNS">resolveParentNS</a></li>
+            
+                <li data-name="Rule#resolveSiblingNS"><a href="Rule.html#resolveSiblingNS">resolveSiblingNS</a></li>
+            
+                <li data-name="Rule#root"><a href="Rule.html#root">root</a></li>
+            
+                <li data-name="Rule#rule"><a href="Rule.html#rule">rule</a></li>
+            
+                <li data-name="Rule#scope"><a href="Rule.html#scope">scope</a></li>
+            
+                <li data-name="Rule#skip"><a href="Rule.html#skip">skip</a></li>
+            
+                <li data-name="Rule#tokenNamespace"><a href="Rule.html#tokenNamespace">tokenNamespace</a></li>
+            
+            </ul>
+            <ul class="events itemMembers">
+            
+            </ul>
+        </li>
+    
+    </ul>
+</div>
+    <div class="main">
+        <h1 class="page-title" data-filename="Rule.html">Class: Rule</h1>
+        
+
+
+
+<section>
+    
+<header>
+    <h2>
+    Rule
+    </h2>
+    
+</header>  
+
+<article>
+    <div class="container-overview">
+    
+    
+    
+        
+<dt>
+    <div class="nameContainer">
+        <h4 class="name" id="Rule">
+            
+            new Rule<span class="signature">()</span>
+        </h4>
+    
+        
+        <div class="tag-source">
+            lib/rule.js, line 30
+        </div>
+        
+    </div>
+
+    
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>Construct a new Rule object</p>
+    </div>
+    
+
+    
+    
+    
+    
+    
+        
+
+<table class="params">
+    <thead>
+	<tr>
+		
+		
+		<th>Type</th>
+		
+		
+		
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+	
+	<tbody>
+	
+	
+        <tr>
+            
+            
+            <td class="type">
+            
+                
+<span class="param-type"><a href="Rule.html#Argument">Rule~Argument</a></span>
+
+
+            
+            </td>
+            
+            
+            
+            <td class="description last">
+                
+                    
+                    
+                        
+                    
+                        <span class="repeatable">repeatable</span>
+                    
+                
+                </td>
+        </tr>
+	
+	
+	</tbody>
+</table>
+    
+    
+    
+<dl class="details">
+    
+        
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+</dl>
+
+    
+    
+
+    
+
+    
+    
+    
+    
+    
+    
+    
+        <h5>Example</h5>
+        
+
+    
+    <pre class="prettyprint"><code>var rule = new Rule('myRule', /\w+/);
+// or
+var rule = Rule('myRule', /\w+/);
+// or
+var rule = Rule('myRule').match(/\w+/);</code></pre>
+    
+
+    
+</dd>
+
+    
+    </div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+        <h3 class="subsection-title">Members</h3>
+        
+        <dl>
+            
+<dt>
+    <div class="nameContainer">
+        <h4 class="name" id="create"><span class="type-signature static">static</span>Rule.create</h4>
+    </div>
+    
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>Simple static method for constructing new <a href="Rule.html">Rule</a>s.</p>
+    </div>
+    
+    
+    
+<dl class="details">
+    
+        
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+</dl>
+
+    
+    
+</dd>
+
+        
+            
+<dt>
+    <div class="nameContainer">
+        <h4 class="name" id="defaultOptions"><span class="type-signature static">static</span>Rule.defaultOptions<span class="type-signature type rule~options"><a href="Rule.html#Options">Rule~Options</a></span> </h4>
+    </div>
+    
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>Default options. Changing these will change the defaults for all future Rule objects.</p>
+    </div>
+    
+    
+    
+<dl class="details">
+    
+        
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+</dl>
+
+    
+    
+</dd>
+
+        
+            
+<dt>
+    <div class="nameContainer">
+        <h4 class="name" id="registerMatch"><span class="type-signature static">static</span>Rule.registerMatch</h4>
+    </div>
+    
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>Proxied to external:ReMix.register</p>
+    </div>
+    
+    
+    
+<dl class="details">
+    
+        
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <dt class="tag-see">See:</dt>
+    <dd class="tag-see">
+        <ul>
+            <li><p><a href="http://bline.github.io/remix/ReMix.html#register">ReMix.register</a></p></li>
+        </ul>
+    </dd>
+    
+    
+    
+</dl>
+
+    
+    
+</dd>
+
+        
+            
+<dt>
+    <div class="nameContainer">
+        <h4 class="name" id="ReMix"><span class="type-signature static">static</span>Rule.ReMix</h4>
+    </div>
+    
+    
+</dt>
+<dd>
+    
+    
+    
+<dl class="details">
+    
+        
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <dt class="tag-see">See:</dt>
+    <dd class="tag-see">
+        <ul>
+            <li><p><a href="http://bline.github.io/remix/ReMix.html">ReMix</a></p></li>
+        </ul>
+    </dd>
+    
+    
+    
+</dl>
+
+    
+    
+</dd>
+
+        
+            
+<dt>
+    <div class="nameContainer">
+        <h4 class="name" id="actions">actions<span class="type-signature type array.<lex~actioncallback>">Array.&lt;<a href="Lex.html#ActionCallback">Lex~ActionCallback</a>></span> </h4>
+    </div>
+    
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>Actions for this rule.</p>
+    </div>
+    
+    
+    
+<dl class="details">
+    
+        
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+</dl>
+
+    
+    
+</dd>
+
+        
+            
+<dt>
+    <div class="nameContainer">
+        <h4 class="name" id="matcher">matcher<span class="type-signature type external:remix"><a href="external-ReMix.html">external:ReMix</a></span> </h4>
+    </div>
+    
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p><a href="http://bline.github.io/remix/ReMix.html">ReMix</a> object for this rule.</p>
+    </div>
+    
+    
+    
+<dl class="details">
+    
+        
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <dt class="tag-see">See:</dt>
+    <dd class="tag-see">
+        <ul>
+            <li><p><a href="http://bline.github.io/remix/ReMix.html">ReMix</a></p></li>
+        </ul>
+    </dd>
+    
+    
+    
+</dl>
+
+    
+    
+</dd>
+
+        
+            
+<dt>
+    <div class="nameContainer">
+        <h4 class="name" id="matches">matches<span class="type-signature type external:remix~template">external:ReMix~Template</span> </h4>
+    </div>
+    
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>collection of specified non-composed matches</p>
+    </div>
+    
+    
+    
+<dl class="details">
+    
+        
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <dt class="tag-see">See:</dt>
+    <dd class="tag-see">
+        <ul>
+            <li><p><a href="http://bline.github.io/remix/ReMix.html#Template">ReMix~Template</a></p></li>
+        </ul>
+    </dd>
+    
+    
+    
+</dl>
+
+    
+    
+</dd>
+
+        
+            
+<dt>
+    <div class="nameContainer">
+        <h4 class="name" id="tokens">tokens<span class="type-signature type array.<rule~token>">Array.&lt;<a href="Rule.html#Token">Rule~Token</a>></span> </h4>
+    </div>
+    
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>collection of tokens returned from rule actions.</p>
+    </div>
+    
+    
+    
+<dl class="details">
+    
+        
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+</dl>
+
+    
+    
+</dd>
+
+        </dl>
+    
+    
+    
+        <h3 class="subsection-title">Methods</h3>
+        
+        <dl>
+            
+<dt>
+    <div class="nameContainer">
+        <h4 class="name" id="defaultAction">
+            
+            <span class="type-signature static">static</span>Rule.defaultAction<span class="signature">()</span>
+        </h4>
+    
+        
+        <div class="tag-source">
+            lib/rule.js, line 141
+        </div>
+        
+    </div>
+
+    
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>The default action which is added to a rule during composition
+if no actions have been setup. Disable by setting Rule~Options.defaultAction
+to null.</p>
+    </div>
+    
+
+    
+    
+    
+    
+    
+    
+    
+<dl class="details">
+    
+        
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+</dl>
+
+    
+    
+
+    
+
+    
+    
+    
+    
+    
+    
+    
+</dd>
+
+        
+            
+<dt>
+    <div class="nameContainer">
+        <h4 class="name" id="handleError">
+            
+            <span class="type-signature static">static</span>Rule.handleError<span class="signature">()</span>
+        </h4>
+    
+        
+        <div class="tag-source">
+            lib/rule.js, line 131
+        </div>
+        
+    </div>
+
+    
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>The default error handler, simply throws the given error.</p>
+    </div>
+    
+
+    
+    
+    
+    
+    
+    
+    
+<dl class="details">
+    
+        
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+</dl>
+
+    
+    
+
+    
+
+    
+    
+    
+    
+    
+    
+    
+</dd>
+
+        
+            
+<dt>
+    <div class="nameContainer">
+        <h4 class="name" id="registerType">
+            
+            <span class="type-signature static">static</span>Rule.registerType<span class="signature">(name, proto)</span>
+        </h4>
+    
+        
+        <div class="tag-source">
+            lib/rule.js, line 117
+        </div>
+        
+    </div>
+
+    
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>Register a <a href="Rule.html#Type">Rule~Type</a></p>
+    </div>
+    
+
+    
+    
+    
+    
+    
+        
+
+<table class="params">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+		
+		<th>Type</th>
+		
+		
+		
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+	
+	<tbody>
+	
+	
+        <tr>
+            
+                <td class="name"><code>name</code></td>
+            
+            
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+            
+            
+            
+            <td class="description last">
+                
+                <p>name to register <a href="Rule.html#Type">Rule~Type</a> under.</p></td>
+        </tr>
+	
+	
+	
+        <tr>
+            
+                <td class="name"><code>proto</code></td>
+            
+            
+            <td class="type">
+            
+                
+<span class="param-type"><a href="Rule.html#Type">Rule~Type</a></span>
+
+
+            
+            </td>
+            
+            
+            
+            <td class="description last">
+                
+                <p>the prototype use to construct the <a href="Rule.html#TypeAPI">Rule~TypeAPI</a>.</p></td>
+        </tr>
+	
+	
+	</tbody>
+</table>
+    
+    
+    
+<dl class="details">
+    
+        
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+</dl>
+
+    
+    
+
+    
+
+    
+    
+    
+    
+    
+    
+    
+</dd>
+
+        
+            
+<dt>
+    <div class="nameContainer">
+        <h4 class="name" id="type">
+            
+            <span class="type-signature static">static</span>Rule.type<span class="signature">(type)</span><span class="glyphicon glyphicon-circle-arrow-right"></span><span class="type-signature returnType">{<a href="Rule.html#TypeAPI">Rule~TypeAPI</a>}</span>
+        </h4>
+    
+        
+        <div class="tag-source">
+            lib/rule.js, line 209
+        </div>
+        
+    </div>
+
+    
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>Returns a constructed type <a href="Rule.html#TypeAPI">Rule~TypeAPI</a> object.</p>
+    </div>
+    
+
+    
+    
+    
+    
+    
+        
+
+<table class="params">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+		
+		<th>Type</th>
+		
+		
+		
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+	
+	<tbody>
+	
+	
+        <tr>
+            
+                <td class="name"><code>type</code></td>
+            
+            
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+            
+            
+            
+            <td class="description last">
+                
+                <p>The name of a registered Type.</p></td>
+        </tr>
+	
+	
+	</tbody>
+</table>
+    
+    
+    
+<dl class="details">
+    
+        
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+</dl>
+
+    
+    
+
+    
+
+    
+    
+    
+    
+    
+    
+    
+
+
+    
+    
+    
+</dd>
+
+        
+            
+<dt>
+    <div class="nameContainer">
+        <h4 class="name" id="action">
+            
+            action<span class="signature">(action)</span><span class="glyphicon glyphicon-circle-arrow-right"></span><span class="type-signature returnType">{<a href="Rule.html">Rule</a>}</span>
+        </h4>
+    
+        
+        <div class="tag-source">
+            lib/rule.js, line 383
+        </div>
+        
+    </div>
+
+    
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>Sets this Rule's actions to the arguments.</p>
+    </div>
+    
+
+    
+    
+    
+    
+    
+        
+
+<table class="params">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+		
+		<th>Type</th>
+		
+		
+		
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+	
+	<tbody>
+	
+	
+        <tr>
+            
+                <td class="name"><code>action</code></td>
+            
+            
+            <td class="type">
+            
+                
+<span class="param-type">Rule~ActionCallback</span>
+
+
+            
+            </td>
+            
+            
+            
+            <td class="description last">
+                
+                    
+                    
+                        
+                    
+                        <span class="repeatable">repeatable</span>
+                    
+                
+                <p>Zero or more callbacks. If called with no
+callbacked, all actions will be emptied.</p></td>
+        </tr>
+	
+	
+	</tbody>
+</table>
+    
+    
+    
+<dl class="details">
+    
+        
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+</dl>
+
+    
+    
+
+    
+
+    
+    
+    
+    
+    
+    
+    
+
+
+    
+    
+    
+</dd>
+
+        
+            
+<dt>
+    <div class="nameContainer">
+        <h4 class="name" id="compose">
+            
+            compose<span class="signature">()</span><span class="glyphicon glyphicon-circle-arrow-right"></span><span class="type-signature returnType">{<a href="Rule.html">Rule</a>}</span>
+        </h4>
+    
+        
+        <div class="tag-source">
+            lib/rule.js, line 305
+        </div>
+        
+    </div>
+
+    
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>Called on the root Rule from within the lexer, you should never need to
+call this unless you are writing another Lex class which uses this.
+Resolves all namespaces, subrules and actions. After this is called,
+everything should be ready for the lexer to extract the relevant bits.</p>
+    </div>
+    
+
+    
+    
+    
+    
+    
+    
+    
+<dl class="details">
+    
+        
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+</dl>
+
+    
+    
+
+    
+
+    
+    
+    
+    
+    
+    
+    
+
+
+    
+    
+    
+</dd>
+
+        
+            
+<dt>
+    <div class="nameContainer">
+        <h4 class="name" id="dump">
+            
+            dump<span class="signature">()</span><span class="glyphicon glyphicon-circle-arrow-right"></span><span class="type-signature returnType">{<a href="Rule.html">Rule</a>}</span>
+        </h4>
+    
+        
+        <div class="tag-source">
+            lib/rule.js, line 443
+        </div>
+        
+    </div>
+
+    
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>Very useful for debugging. Dumps the structures of the current Rule and all
+children to the console.</p>
+    </div>
+    
+
+    
+    
+    
+    
+    
+    
+    
+<dl class="details">
+    
+        
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+</dl>
+
+    
+    
+
+    
+
+    
+    
+    
+    
+    
+    
+    
+
+
+    
+    
+    
+</dd>
+
+        
+            
+<dt>
+    <div class="nameContainer">
+        <h4 class="name" id="exclusive">
+            
+            exclusive<span class="signature">(bool)</span><span class="glyphicon glyphicon-circle-arrow-right"></span><span class="type-signature returnType">{<a href="Rule.html">Rule</a>}</span>
+        </h4>
+    
+        
+        <div class="tag-source">
+            lib/rule.js, line 419
+        </div>
+        
+    </div>
+
+    
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>Sets the current rule to be exclusive. This means it will not be included
+in it's parent's rules. This is use for using <a href="Rule.html#Composition">Rule~Composition</a> or
+creating Rules which are only tested during certain Lexer states.</p>
+    </div>
+    
+
+    
+    
+    
+    
+    
+        
+
+<table class="params">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+		
+		<th>Type</th>
+		
+		
+		
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+	
+	<tbody>
+	
+	
+        <tr>
+            
+                <td class="name"><code>bool</code></td>
+            
+            
+            <td class="type">
+            
+                
+<span class="param-type">Boolean</span>
+
+
+            
+            </td>
+            
+            
+            
+            <td class="description last">
+                
+                <p>True if this Rule is exclusive.</p></td>
+        </tr>
+	
+	
+	</tbody>
+</table>
+    
+    
+    
+<dl class="details">
+    
+        
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+</dl>
+
+    
+    
+
+    
+
+    
+    
+    
+    
+    
+    
+    
+
+
+    
+    
+    
+</dd>
+
+        
+            
+<dt>
+    <div class="nameContainer">
+        <h4 class="name" id="forEach">
+            
+            forEach<span class="signature">(func, ctx)</span>
+        </h4>
+    
+        
+        <div class="tag-source">
+            lib/rule.js, line 373
+        </div>
+        
+    </div>
+
+    
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>Loop through all this rule's child rules.</p>
+    </div>
+    
+
+    
+    
+    
+    
+    
+        
+
+<table class="params">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+		
+		<th>Type</th>
+		
+		
+		
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+	
+	<tbody>
+	
+	
+        <tr>
+            
+                <td class="name"><code>func</code></td>
+            
+            
+            <td class="type">
+            
+                
+<span class="param-type">Rule~ForEachCallback</span>
+
+
+            
+            </td>
+            
+            
+            
+            <td class="description last">
+                
+                <p>function to call on each iteraction.</p></td>
+        </tr>
+	
+	
+	
+        <tr>
+            
+                <td class="name"><code>ctx</code></td>
+            
+            
+            <td class="type">
+            
+                
+<span class="param-type">*</span>
+
+
+            
+            </td>
+            
+            
+            
+            <td class="description last">
+                
+                <p>Set the context.</p></td>
+        </tr>
+	
+	
+	</tbody>
+</table>
+    
+    
+    
+<dl class="details">
+    
+        
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+</dl>
+
+    
+    
+
+    
+
+    
+    
+    
+    
+    
+    
+    
+</dd>
+
+        
+            
+<dt>
+    <div class="nameContainer">
+        <h4 class="name" id="getOption">
+            
+            getOption<span class="signature">(optName)</span><span class="glyphicon glyphicon-circle-arrow-right"></span><span class="type-signature returnType">{*}</span>
+        </h4>
+    
+        
+        <div class="tag-source">
+            lib/rule.js, line 266
+        </div>
+        
+    </div>
+
+    
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>Get option specified by name.</p>
+    </div>
+    
+
+    
+    
+    
+    
+    
+        
+
+<table class="params">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+		
+		<th>Type</th>
+		
+		
+		
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+	
+	<tbody>
+	
+	
+        <tr>
+            
+                <td class="name"><code>optName</code></td>
+            
+            
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+            
+            
+            
+            <td class="description last">
+                
+                <p>name of option value to return.</p></td>
+        </tr>
+	
+	
+	</tbody>
+</table>
+    
+    
+    
+<dl class="details">
+    
+        
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+</dl>
+
+    
+    
+
+    
+
+    
+    
+    
+    
+    
+    
+    
+
+
+<h5>Returns:</h5>
+value
+<br />
+
+    
+    
+    
+</dd>
+
+        
+            
+<dt>
+    <div class="nameContainer">
+        <h4 class="name" id="match">
+            
+            match<span class="signature">()</span><span class="glyphicon glyphicon-circle-arrow-right"></span><span class="type-signature returnType">{<a href="Rule.html">Rule</a>}</span>
+        </h4>
+    
+        
+        <div class="tag-source">
+            lib/rule.js, line 293
+        </div>
+        
+    </div>
+
+    
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>Adds arguments to the current Match collection.</p>
+    </div>
+    
+
+    
+    
+    
+    
+    
+        
+
+<table class="params">
+    <thead>
+	<tr>
+		
+		
+		<th>Type</th>
+		
+		
+		
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+	
+	<tbody>
+	
+	
+        <tr>
+            
+            
+            <td class="type">
+            
+                
+<span class="param-type">external:ReMix~Spec</span>
+
+
+            
+            </td>
+            
+            
+            
+            <td class="description last">
+                
+                    
+                    
+                        
+                    
+                        <span class="repeatable">repeatable</span>
+                    
+                
+                </td>
+        </tr>
+	
+	
+	</tbody>
+</table>
+    
+    
+    
+<dl class="details">
+    
+        
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <dt class="tag-see">See:</dt>
+    <dd class="tag-see">
+        <ul>
+            <li><p><a href="http://bline.github.io/remix/ReMix.html#Spec">ReMix~Spec</a></p></li>
+        </ul>
+    </dd>
+    
+    
+    
+</dl>
+
+    
+    
+
+    
+
+    
+    
+    
+    
+    
+    
+    
+
+
+    
+    
+    
+</dd>
+
+        
+            
+<dt>
+    <div class="nameContainer">
+        <h4 class="name" id="options">
+            
+            options<span class="signature">(opt)</span>
+        </h4>
+    
+        
+        <div class="tag-source">
+            lib/rule.js, line 252
+        </div>
+        
+    </div>
+
+    
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>Set options.</p>
+    </div>
+    
+
+    
+    
+    
+    
+    
+        
+
+<table class="params">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+		
+		<th>Type</th>
+		
+		
+		
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+	
+	<tbody>
+	
+	
+        <tr>
+            
+                <td class="name"><code>opt</code></td>
+            
+            
+            <td class="type">
+            
+                
+<span class="param-type"><a href="Rule.html#Options">Rule~Options</a></span>
+
+
+            
+            </td>
+            
+            
+            
+            <td class="description last">
+                
+                </td>
+        </tr>
+	
+	
+	</tbody>
+</table>
+    
+    
+    
+<dl class="details">
+    
+        
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+</dl>
+
+    
+    
+
+    
+
+    
+    
+    
+    
+    
+    
+    
+</dd>
+
+        
+            
+<dt>
+    <div class="nameContainer">
+        <h4 class="name" id="parent">
+            
+            parent<span class="signature">()</span><span class="glyphicon glyphicon-circle-arrow-right"></span><span class="type-signature returnType">{<a href="Rule.html">Rule</a>}</span>
+        </h4>
+    
+        
+        <div class="tag-source">
+            lib/rule.js, line 275
+        </div>
+        
+    </div>
+
+    
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>Returns the parent of the current <a href="Rule.html">Rule</a>.</p>
+    </div>
+    
+
+    
+    
+    
+    
+    
+    
+    
+<dl class="details">
+    
+        
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+</dl>
+
+    
+    
+
+    
+
+    
+    
+    
+    
+    
+    
+    
+
+
+    
+    
+    
+</dd>
+
+        
+            
+<dt>
+    <div class="nameContainer">
+        <h4 class="name" id="pushAction">
+            
+            pushAction<span class="signature">(action)</span><span class="glyphicon glyphicon-circle-arrow-right"></span><span class="type-signature returnType">{<a href="Rule.html">Rule</a>}</span>
+        </h4>
+    
+        
+        <div class="tag-source">
+            lib/rule.js, line 396
+        </div>
+        
+    </div>
+
+    
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>Add action to the current list of actions for this rule. Actions happen
+when a <a href="Rule.html">Rule</a> matches. They generally change the Lexer state or
+return Tokens, but actions can do anything.</p>
+    </div>
+    
+
+    
+    
+    
+    
+    
+        
+
+<table class="params">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+		
+		<th>Type</th>
+		
+		
+		
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+	
+	<tbody>
+	
+	
+        <tr>
+            
+                <td class="name"><code>action</code></td>
+            
+            
+            <td class="type">
+            
+                
+<span class="param-type">Rule~ActionCallback</span>
+
+
+            
+            </td>
+            
+            
+            
+            <td class="description last">
+                
+                <p>The action to add to this rules
+actions.</p></td>
+        </tr>
+	
+	
+	</tbody>
+</table>
+    
+    
+    
+<dl class="details">
+    
+        
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+</dl>
+
+    
+    
+
+    
+
+    
+    
+    
+    
+    
+    
+    
+
+
+    
+    
+    
+</dd>
+
+        
+            
+<dt>
+    <div class="nameContainer">
+        <h4 class="name" id="resolveNS">
+            
+            resolveNS<span class="signature">()</span><span class="glyphicon glyphicon-circle-arrow-right"></span><span class="type-signature returnType">{String}</span>
+        </h4>
+    
+        
+        <div class="tag-source">
+            lib/rule.js, line 336
+        </div>
+        
+    </div>
+
+    
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>Returns the namespace which represents the current Rule. Rules without a
+namespace use the first parent which has a namespace for purposes of
+resolution.</p>
+    </div>
+    
+
+    
+    
+    
+    
+    
+    
+    
+<dl class="details">
+    
+        
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+</dl>
+
+    
+    
+
+    
+
+    
+    
+    
+    
+    
+    
+    
+
+
+<h5>Returns:</h5>
+namespace of current Rule.
+<br />
+
+    
+    
+    
+</dd>
+
+        
+            
+<dt>
+    <div class="nameContainer">
+        <h4 class="name" id="resolveParentNS">
+            
+            resolveParentNS<span class="signature">()</span><span class="glyphicon glyphicon-circle-arrow-right"></span><span class="type-signature returnType">{String}</span>
+        </h4>
+    
+        
+        <div class="tag-source">
+            lib/rule.js, line 348
+        </div>
+        
+    </div>
+
+    
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>Similar to Rule~resolveNS, but resolves
+the parent Rule's namespace.</p>
+    </div>
+    
+
+    
+    
+    
+    
+    
+    
+    
+<dl class="details">
+    
+        
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+</dl>
+
+    
+    
+
+    
+
+    
+    
+    
+    
+    
+    
+    
+
+
+<h5>Returns:</h5>
+parent namespace of current Rule.
+<br />
+
+    
+    
+    
+</dd>
+
+        
+            
+<dt>
+    <div class="nameContainer">
+        <h4 class="name" id="resolveSiblingNS">
+            
+            resolveSiblingNS<span class="signature">(namespace)</span><span class="glyphicon glyphicon-circle-arrow-right"></span><span class="type-signature returnType">{String}</span>
+        </h4>
+    
+        
+        <div class="tag-source">
+            lib/rule.js, line 320
+        </div>
+        
+    </div>
+
+    
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>This is used to resolve the namespace of sibling Rules. This is used when
+processing <a href="Rule.html">Rule</a> <a href="Rule.html#Composition">compositions</a>.</p>
+    </div>
+    
+
+    
+    
+    
+    
+    
+        
+
+<table class="params">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+		
+		<th>Type</th>
+		
+		
+		
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+	
+	<tbody>
+	
+	
+        <tr>
+            
+                <td class="name"><code>namespace</code></td>
+            
+            
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+            
+            
+            
+            <td class="description last">
+                
+                <p>the namespace, or name if it's a sibling, to
+resolve.</p></td>
+        </tr>
+	
+	
+	</tbody>
+</table>
+    
+    
+    
+<dl class="details">
+    
+        
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <dt class="tag-see">See:</dt>
+    <dd class="tag-see">
+        <ul>
+            <li><a href="Rule.html#Composition">Rule~Composition</a>.</li>
+        </ul>
+    </dd>
+    
+    
+    
+</dl>
+
+    
+    
+
+    
+
+    
+    
+    
+    
+    
+    
+    
+
+
+<h5>Returns:</h5>
+namespace.
+<br />
+
+    
+    
+    
+</dd>
+
+        
+            
+<dt>
+    <div class="nameContainer">
+        <h4 class="name" id="root">
+            
+            root<span class="signature">()</span><span class="glyphicon glyphicon-circle-arrow-right"></span><span class="type-signature returnType">{<a href="Rule.html">Rule</a>}</span>
+        </h4>
+    
+        
+        <div class="tag-source">
+            lib/rule.js, line 283
+        </div>
+        
+    </div>
+
+    
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>Returns the root of all Rules which could possibly be the current Rule.</p>
+    </div>
+    
+
+    
+    
+    
+    
+    
+    
+    
+<dl class="details">
+    
+        
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+</dl>
+
+    
+    
+
+    
+
+    
+    
+    
+    
+    
+    
+    
+
+
+    
+    
+    
+</dd>
+
+        
+            
+<dt>
+    <div class="nameContainer">
+        <h4 class="name" id="rule">
+            
+            rule<span class="signature">()</span><span class="glyphicon glyphicon-circle-arrow-right"></span><span class="type-signature returnType">{<a href="Rule.html">Rule</a>}</span>
+        </h4>
+    
+        
+        <div class="tag-source">
+            lib/rule.js, line 243
+        </div>
+        
+    </div>
+
+    
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>Constructs a child <a href="Rule.html">Rule</a> of the current <a href="Rule.html">Rule</a>.</p>
+    </div>
+    
+
+    
+    
+    
+    
+    
+        
+
+<table class="params">
+    <thead>
+	<tr>
+		
+		
+		<th>Type</th>
+		
+		
+		
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+	
+	<tbody>
+	
+	
+        <tr>
+            
+            
+            <td class="type">
+            
+                
+<span class="param-type"><a href="Rule.html#Argument">Rule~Argument</a></span>
+
+
+            
+            </td>
+            
+            
+            
+            <td class="description last">
+                
+                    
+                    
+                        
+                    
+                        <span class="repeatable">repeatable</span>
+                    
+                
+                </td>
+        </tr>
+	
+	
+	</tbody>
+</table>
+    
+    
+    
+<dl class="details">
+    
+        
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+</dl>
+
+    
+    
+
+    
+
+    
+    
+    
+    
+    
+    
+    
+
+
+    
+    
+    
+</dd>
+
+        
+            
+<dt>
+    <div class="nameContainer">
+        <h4 class="name" id="scope">
+            
+            scope<span class="signature">(callback, args)</span><span class="glyphicon glyphicon-circle-arrow-right"></span><span class="type-signature returnType">{*}</span>
+        </h4>
+    
+        
+        <div class="tag-source">
+            lib/rule.js, line 194
+        </div>
+        
+    </div>
+
+    
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>Used for calling <a href="Rule.html#SetupCallback">Rule~SetupCallback</a> so that all rules
+constructed can be parent correctly.</p>
+    </div>
+    
+
+    
+    
+    
+    
+    
+        
+
+<table class="params">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+		
+		<th>Type</th>
+		
+		
+		
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+	
+	<tbody>
+	
+	
+        <tr>
+            
+                <td class="name"><code>callback</code></td>
+            
+            
+            <td class="type">
+            
+                
+<span class="param-type"><a href="Rule.html#SetupCallback">Rule~SetupCallback</a></span>
+
+
+            
+            </td>
+            
+            
+            
+            <td class="description last">
+                
+                </td>
+        </tr>
+	
+	
+	
+        <tr>
+            
+                <td class="name"><code>args</code></td>
+            
+            
+            <td class="type">
+            
+                
+<span class="param-type">Array</span>
+
+
+            
+            </td>
+            
+            
+            
+            <td class="description last">
+                
+                <p>Array of arguments.</p></td>
+        </tr>
+	
+	
+	</tbody>
+</table>
+    
+    
+    
+<dl class="details">
+    
+        
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+</dl>
+
+    
+    
+
+    
+
+    
+    
+    
+    
+    
+    
+    
+
+
+<h5>Returns:</h5>
+of callback.
+<br />
+
+    
+    
+    
+</dd>
+
+        
+            
+<dt>
+    <div class="nameContainer">
+        <h4 class="name" id="skip">
+            
+            skip<span class="signature">(bool)</span><span class="glyphicon glyphicon-circle-arrow-right"></span><span class="type-signature returnType">{<a href="Rule.html">Rule</a>}</span>
+        </h4>
+    
+        
+        <div class="tag-source">
+            lib/rule.js, line 406
+        </div>
+        
+    </div>
+
+    
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>Just sets the current Rule's actions to a NOOP if boolean is true.</p>
+    </div>
+    
+
+    
+    
+    
+    
+    
+        
+
+<table class="params">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+		
+		<th>Type</th>
+		
+		
+		
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+	
+	<tbody>
+	
+	
+        <tr>
+            
+                <td class="name"><code>bool</code></td>
+            
+            
+            <td class="type">
+            
+                
+<span class="param-type">Boolean</span>
+
+
+            
+            </td>
+            
+            
+            
+            <td class="description last">
+                
+                <p>If true, ensure this rule's matches are skipped.</p></td>
+        </tr>
+	
+	
+	</tbody>
+</table>
+    
+    
+    
+<dl class="details">
+    
+        
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+</dl>
+
+    
+    
+
+    
+
+    
+    
+    
+    
+    
+    
+    
+
+
+    
+    
+    
+</dd>
+
+        
+            
+<dt>
+    <div class="nameContainer">
+        <h4 class="name" id="tokenNamespace">
+            
+            tokenNamespace<span class="signature">()</span><span class="glyphicon glyphicon-circle-arrow-right"></span><span class="type-signature returnType">{String}</span>
+        </h4>
+    
+        
+        <div class="tag-source">
+            lib/rule.js, line 362
+        </div>
+        
+    </div>
+
+    
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>Retrieves the Token name possibly suffixed by this Rule's Type. The Token
+name is the first token specified when instanciating a <a href="Rule.html">Rule</a> object.
+The Rule's type is the identifier given to the <a href="Rule.html#TypeAPI">Rule~TypeAPI</a>. Type
+only applies if this Rule was created using that API.</p>
+    </div>
+    
+
+    
+    
+    
+    
+    
+    
+    
+<dl class="details">
+    
+        
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+</dl>
+
+    
+    
+
+    
+
+    
+    
+    
+    
+    
+    
+    
+
+
+<h5>Returns:</h5>
+Rule's token name with possible type suffix.
+<br />
+
+    
+    
+    
+</dd>
+
+        </dl>
+    
+    
+    
+        <h3 class="subsection-title">Type Definitions</h3>
+        
+        <dl>
+                
+<dt>
+    <div class="nameContainer">
+        <h4 class="name" id="Argument">Argument<span class="type-signature type rule~setupcallback"><a href="Rule.html#SetupCallback">Rule~SetupCallback</a></span> <span class="type-signature type regexp">RegExp</span> <span class="type-signature type rule~token"><a href="Rule.html#Token">Rule~Token</a></span> <span class="type-signature type rule~composition"><a href="Rule.html#Composition">Rule~Composition</a></span> </h4>
+    </div>
+    
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p><a href="Rule.html">Rule</a> constructor takes unlimited number of arguments.</p>
+    </div>
+    
+    
+    
+<dl class="details">
+    
+        
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+</dl>
+
+    
+    
+</dd>
+
+            
+                
+<dt>
+    <div class="nameContainer">
+        <h4 class="name" id="Composition">Composition<span class="type-signature type array.<string>">Array.&lt;String></span> </h4>
+    </div>
+    
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>Rules can compose other rules. The composition is done by specifying
+an array of <a href="Rule.html">Rule</a> namespaces. The namespaces given can be without
+parent prefix if specifying a sibling <a href="Rule.html">Rule</a>. All compositions happen inline,
+this means the definition for the Rule being composed needs to happen first.</p>
+<p>Each composed Rule's children, actions Composing a rule takes all that rules children and actions</p>
+<p>Making a rule Rule~Options.exclusive and then composing it in multiple places
+is the intent, however you may use composition however you like.</p>
+    </div>
+    
+    
+    
+<dl class="details">
+    
+        
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+</dl>
+
+    
+    
+</dd>
+
+            
+                
+<dt>
+    <div class="nameContainer">
+        <h4 class="name" id="ErrorCallback">
+            
+            ErrorCallback<span class="signature">(error)</span>
+        </h4>
+    
+        
+        <div class="tag-source">
+            lib/rule.js, line 646
+        </div>
+        
+    </div>
+
+    
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>Callback used for error handling.</p>
+    </div>
+    
+
+    
+    
+    
+    
+    
+        
+
+<table class="params">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+		
+		<th>Type</th>
+		
+		
+		
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+	
+	<tbody>
+	
+	
+        <tr>
+            
+                <td class="name"><code>error</code></td>
+            
+            
+            <td class="type">
+            
+                
+<span class="param-type">Error</span>
+
+
+            
+            </td>
+            
+            
+            
+            <td class="description last">
+                
+                <p>The error object for the current uncaught exception.</p></td>
+        </tr>
+	
+	
+	</tbody>
+</table>
+    
+    
+    
+<dl class="details">
+    
+        
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <dt class="tag-see">See:</dt>
+    <dd class="tag-see">
+        <ul>
+            <li><a href="Rule.html#Options">Rule~Options</a></li>
+        
+            <li><a href="Rule.html#options">Rule#options</a></li>
+        </ul>
+    </dd>
+    
+    
+    
+</dl>
+
+    
+    
+
+    
+
+    
+    
+    
+    
+    
+    
+    
+</dd>
+
+            
+                
+<dt>
+    <div class="nameContainer">
+        <h4 class="name" id="Options">Options<span class="type-signature type object">Object</span> </h4>
+    </div>
+    
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>Default options for all instances of <a href="Rule.html">Rule</a> can be set by changing
+<a href="Rule.html#defaultOptions">Rule.defaultOptions</a>. Per-instance options can be specified to
+<a href="Rule.html#options">Rule#options</a> which are merged with <a href="Rule.html#defaultOptions">Rule.defaultOptions</a>.</p>
+    </div>
+    
+    
+    
+<dl class="details">
+    
+        
+        <h5 class="subsection-title">Properties:</h5>
+        
+        <dl>
+
+<table class="props">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+		
+		<th>Type</th>
+		
+		
+		
+		
+		<th>Default</th>
+		
+		
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+	
+	<tbody>
+	
+	
+        <tr>
+            
+                <td class="name"><code>nsDelimiter</code></td>
+            
+            
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+            
+            
+            
+            
+                <td class="default">
+                
+                    .
+                
+                </td>
+            
+            
+            <td class="description last"><p>The delimiter used for composing
+namespaces.</p></td>
+        </tr>
+	
+	
+	
+        <tr>
+            
+                <td class="name"><code>exclusive</code></td>
+            
+            
+            <td class="type">
+            
+                
+<span class="param-type">Boolean</span>
+
+
+            
+            </td>
+            
+            
+            
+            
+                <td class="default">
+                
+                    false
+                
+                </td>
+            
+            
+            <td class="description last"><p>Indicated if this rule should be
+composed into it's parent.</p></td>
+        </tr>
+	
+	
+	
+        <tr>
+            
+                <td class="name"><code>handleError</code></td>
+            
+            
+            <td class="type">
+            
+                
+<span class="param-type"><a href="Rule.html#ErrorCallback">Rule~ErrorCallback</a></span>
+
+
+            
+            </td>
+            
+            
+            
+            
+                <td class="default">
+                
+                    Rule.handleError
+                
+                </td>
+            
+            
+            <td class="description last"><p>Called for
+any exceptions.</p></td>
+        </tr>
+	
+	
+	
+        <tr>
+            
+                <td class="name"><code>defaultAction</code></td>
+            
+            
+            <td class="type">
+            
+                
+<span class="param-type"><a href="Lex.html#ActionCallback">Lex~ActionCallback</a></span>
+
+
+            
+            </td>
+            
+            
+            
+            
+                <td class="default">
+                
+                    Rule.defaultAction
+                
+                </td>
+            
+            
+            <td class="description last"><p>This
+action is set as the Rule's only action if not action have been specified.
+Set to null to disable default actions.</p></td>
+        </tr>
+	
+	
+	
+        <tr>
+            
+                <td class="name"><code>inheritable</code></td>
+            
+            
+            <td class="type">
+            
+                
+<span class="param-type">Array.&lt;String></span>
+
+
+            
+            </td>
+            
+            
+            
+            
+                <td class="default">
+                
+                    nsDelimiter,handleError,defaultAction
+                
+                </td>
+            
+            
+            <td class="description last"><p>List of attributes in <a href="Rule.html#Options">this object</a> which
+should be set in children we are parenting.</p></td>
+        </tr>
+	
+	
+	</tbody>
+</table></dl>
+        
+    
+        
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <dt class="tag-see">See:</dt>
+    <dd class="tag-see">
+        <ul>
+            <li><a href="Rule.html#options">Rule#options</a></li>
+        
+            <li><a href="Rule.html#defaultOptions">Rule.defaultOptions</a></li>
+        </ul>
+    </dd>
+    
+    
+    
+</dl>
+
+    
+    
+</dd>
+
+            
+                
+<dt>
+    <div class="nameContainer">
+        <h4 class="name" id="SetupCallback">
+            
+            SetupCallback<span class="signature">()</span>
+        </h4>
+    
+        
+        <div class="tag-source">
+            lib/rule.js, line 654
+        </div>
+        
+    </div>
+
+    
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>Callback for setting up children. Any <a href="Rule.html">Rule</a> constructed in this callback
+will be parented by the Rule the callback was specified to.</p>
+    </div>
+    
+
+    
+    
+    
+        <h5>This:</h5>
+        <ul><li>{<a href="Rule.html">Rule</a>}</li></ul>
+    
+    
+    
+        
+
+<table class="params">
+    <thead>
+	<tr>
+		
+		
+		<th>Type</th>
+		
+		
+		
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+	
+	<tbody>
+	
+	
+        <tr>
+            
+            
+            <td class="type">
+            
+                
+<span class="param-type">Rule.constructor</span>
+
+
+            
+            </td>
+            
+            
+            
+            <td class="description last">
+                
+                <p>Use as function or constructor to create new child
+<a href="Rule.html">Rule</a>s</p></td>
+        </tr>
+	
+	
+	</tbody>
+</table>
+    
+    
+    
+<dl class="details">
+    
+        
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <dt class="tag-see">See:</dt>
+    <dd class="tag-see">
+        <ul>
+            <li><a href="Rule.html">Rule</a></li>
+        </ul>
+    </dd>
+    
+    
+    
+</dl>
+
+    
+    
+
+    
+
+    
+    
+    
+    
+    
+    
+    
+</dd>
+
+            
+                
+<dt>
+    <div class="nameContainer">
+        <h4 class="name" id="Token">
+            
+            Token<span class="signature">(rule, index-)</span>
+        </h4>
+    
+        
+        <div class="tag-source">
+            lib/rule.js, line 714
+        </div>
+        
+    </div>
+
+    
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>Simple iteration callback, just proxied to Array.prototype.forEach..</p>
+    </div>
+    
+
+    
+    
+    
+    
+    
+        
+
+<table class="params">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+		
+		<th>Type</th>
+		
+		
+		
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+	
+	<tbody>
+	
+	
+        <tr>
+            
+                <td class="name"><code>rule</code></td>
+            
+            
+            <td class="type">
+            
+                
+<span class="param-type"><a href="Rule.html">Rule</a></span>
+
+
+            
+            </td>
+            
+            
+            
+            <td class="description last">
+                
+                <p>Current Rule in <code>forEach</code> iteration.</p></td>
+        </tr>
+	
+	
+	
+        <tr>
+            
+                <td class="name"><code>index-</code></td>
+            
+            
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+            
+            
+            
+            <td class="description last">
+                
+                <p>Current index in <code>forEach</code> iteraction.
+  /**
+Tokens are returned up through the Lexer when this <a href="Rule.html">Rule</a> matches.
+The first token specified is considered the name of the current Rule.
+If namespaces are enabled, each token is prefixed with the current name
+stack.</p></td>
+        </tr>
+	
+	
+	</tbody>
+</table>
+    
+    
+    
+<dl class="details">
+    
+        
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+</dl>
+
+    
+    
+
+    
+
+    
+    
+    
+    
+    
+    
+    
+</dd>
+
+            
+                
+<dt>
+    <div class="nameContainer">
+        <h4 class="name" id="Type">Type<span class="type-signature type object">Object</span> </h4>
+    </div>
+    
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>This specifies the Type API object which is used for extending
+the current Ruleset with a Type.</p>
+    </div>
+    
+    
+    
+<dl class="details">
+    
+        
+        <h5 class="subsection-title">Properties:</h5>
+        
+        <dl>
+
+<table class="props">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+		
+		<th>Type</th>
+		
+		
+		
+		
+		
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+	
+	<tbody>
+	
+	
+        <tr>
+            
+                <td class="name"><code>create</code></td>
+            
+            
+            <td class="type">
+            
+                
+<span class="param-type"><a href="Rule.html#TypeCreateCallback">Rule~TypeCreateCallback</a></span>
+
+
+            
+            </td>
+            
+            
+            
+            
+            
+            <td class="description last"><p>If specified, this will be called to create the API object.</p></td>
+        </tr>
+	
+	
+	
+        <tr>
+            
+                <td class="name"><code>registerMatch</code></td>
+            
+            
+            <td class="type">
+            
+                
+<span class="param-type">external:ReMix~Pairs</span>
+
+
+            
+            </td>
+            
+            
+            
+            
+            
+            <td class="description last"><p>Key/value pairs to register as templates in <a href="external-ReMix.html">external:ReMix</a>.</p></td>
+        </tr>
+	
+	
+	
+        <tr>
+            
+                <td class="name"><code>api</code></td>
+            
+            
+            <td class="type">
+            
+                
+<span class="param-type">Object.&lt;String, function()></span>
+
+
+            
+            </td>
+            
+            
+            
+            
+            
+            <td class="description last"><p>Extends the final API. Provide type specific method here that mutate the
+current Rule or create new sub-rules.</p></td>
+        </tr>
+	
+	
+	</tbody>
+</table></dl>
+        
+    
+        
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <dt class="tag-see">See:</dt>
+    <dd class="tag-see">
+        <ul>
+            <li><p><a href="http://bline.github.io/remix/ReMix.html#Pairs">ReMix~Pairs</a></p></li>
+        </ul>
+    </dd>
+    
+    
+    
+</dl>
+
+    
+    
+</dd>
+
+            
+                
+<dt>
+    <div class="nameContainer">
+        <h4 class="name" id="TypeAPI">
+            
+            TypeAPI<span class="signature">(<span class="optional">name</span>, args)</span><span class="glyphicon glyphicon-circle-arrow-right"></span><span class="type-signature returnType">{<a href="Rule.html">Rule</a>}</span>
+        </h4>
+    
+        
+        <div class="tag-source">
+            lib/rule.js, line 704
+        </div>
+        
+    </div>
+
+    
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>This is the base API which is extended by any Rule~Type.api</p>
+    </div>
+    
+
+    
+    
+    
+    
+    
+        
+
+<table class="params">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+		
+		<th>Type</th>
+		
+		
+		
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+	
+	<tbody>
+	
+	
+        <tr>
+            
+                <td class="name"><code>name</code></td>
+            
+            
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+            
+            
+            
+            <td class="description last">
+                
+                    
+                        <span class="optional">optional</span>
+                    
+                    
+                        
+                    
+                
+                <p>Optional name for <a href="Rule.html">Rule</a> construction.</p></td>
+        </tr>
+	
+	
+	
+        <tr>
+            
+                <td class="name"><code>args</code></td>
+            
+            
+            <td class="type">
+            
+                
+<span class="param-type">Array</span>
+
+
+            
+            </td>
+            
+            
+            
+            <td class="description last">
+                
+                    
+                    
+                        
+                    
+                
+                <p>Arguments to constructor for new <a href="Rule.html">Rule</a>.</p></td>
+        </tr>
+	
+	
+	</tbody>
+</table>
+    
+    
+    
+<dl class="details">
+    
+        
+        <h5 class="subsection-title">Properties:</h5>
+        
+        <dl>
+
+<table class="props">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+		
+		<th>Type</th>
+		
+		
+		
+		
+		
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+	
+	<tbody>
+	
+	
+        <tr>
+            
+                <td class="name"><code>rule</code></td>
+            
+            
+            <td class="type">
+            
+                
+<span class="param-type"><a href="Rule.html#TypeAPI">Rule~TypeAPI</a></span>
+
+
+            
+            </td>
+            
+            
+            
+            
+            
+            <td class="description last"><p>alias</p></td>
+        </tr>
+	
+	
+	
+        <tr>
+            
+                <td class="name"><code>retool</code></td>
+            
+            
+            <td class="type">
+            
+                
+<span class="param-type">retool</span>
+
+
+            
+            </td>
+            
+            
+            
+            
+            
+            <td class="description last"></td>
+        </tr>
+	
+	
+	</tbody>
+</table></dl>
+        
+    
+        
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+</dl>
+
+    
+    
+
+    
+
+    
+    
+    
+    
+    
+    
+    
+
+
+    
+    
+    
+</dd>
+
+            
+                
+<dt>
+    <div class="nameContainer">
+        <h4 class="name" id="TypeCreateCallback">
+            
+            TypeCreateCallback<span class="signature">(rule)</span><span class="glyphicon glyphicon-circle-arrow-right"></span><span class="type-signature returnType">{<a href="Rule.html#Type">Rule~Type</a>}</span>
+        </h4>
+    
+        
+        <div class="tag-source">
+            lib/rule.js, line 685
+        </div>
+        
+    </div>
+
+    
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>If a {Rule~TypeAPI.create} property if set, it is called to construct
+the prototype which extends the default API.</p>
+    </div>
+    
+
+    
+    
+    
+    
+    
+        
+
+<table class="params">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+		
+		<th>Type</th>
+		
+		
+		
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+	
+	<tbody>
+	
+	
+        <tr>
+            
+                <td class="name"><code>rule</code></td>
+            
+            
+            <td class="type">
+            
+                
+<span class="param-type"><a href="Rule.html">Rule</a></span>
+
+
+            
+            </td>
+            
+            
+            
+            <td class="description last">
+                
+                <p>The current Rule.</p></td>
+        </tr>
+	
+	
+	</tbody>
+</table>
+    
+    
+    
+<dl class="details">
+    
+        
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+</dl>
+
+    
+    
+
+    
+
+    
+    
+    
+    
+    
+    
+    
+
+
+    
+    
+    
+</dd>
+
+            </dl>
+    
+    
+    
+</article>
+
+</section>  
+
+
+
+
+
+        
+
+        <footer>
+            Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.3.0-alpha11</a> on Tue Dec 09 2014 04:22:52 GMT+0000 (UTC)
+        </footer>
+    </div>
+</div>
+<script>prettyPrint();</script>
+<script src="scripts/linenumber.js"></script>
+<script src="scripts/main.js"></script>
+</body>
+</html>

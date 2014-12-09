@@ -1,0 +1,2909 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Dex</title>
+    
+    <meta name="description" content="named regular expression alternation for tokenizers" />
+    
+        <meta name="keywords" content="RegExp,regex,lexer,tokenizer" />
+        <meta name="keyword" content="RegExp,regex,lexer,tokenizer" />
+    
+    
+    
+    <meta property="og:title" content=""/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:image" content=""/>
+    
+    <meta property="og:url" content=""/>
+    
+    <script src="scripts/prettify/prettify.js"></script>
+    <script src="scripts/prettify/lang-css.js"></script>
+    <script src="scripts/jquery.min.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/bootstrap.min.css">
+    <link type="text/css" rel="stylesheet" href="styles/jaguar.css">
+    
+    
+    <script>
+    var config = {"monospaceLinks":false,"cleverLinks":false,"applicationName":"Dex","disqus":"","googleAnalytics":"","openGraph":{"title":"","type":"website","image":"","site_name":"","url":""},"meta":{"title":"Dex","description":"named regular expression alternation for tokenizers","keyword":"RegExp,regex,lexer,tokenizer"},"linenums":true,"default":{}};
+    </script>
+    
+
+    
+</head>
+<body>
+<div id="wrap" class="clearfix">
+    
+<div class="navigation">
+    <h3 class="applicationName"><a href="index.html">Dex</a></h3>
+
+    <div class="search">
+        <input id="search" type="text" class="form-control input-sm" placeholder="Search Documentations">
+    </div>
+    <ul class="list">
+    
+        <li class="item" data-name="Lex">
+            <span class="title">
+                <a href="Lex.html">Lex</a>
+                
+            </span>
+            <ul class="members itemMembers">
+            
+            <span class="subtitle">Members</span>
+            
+                <li data-name="Lex.defaultOptions"><a href="Lex.html#defaultOptions">defaultOptions</a></li>
+            
+                <li data-name="Lex#index"><a href="Lex.html#index">index</a></li>
+            
+                <li data-name="Lex#source"><a href="Lex.html#source">source</a></li>
+            
+                <li data-name="Lex#tokens"><a href="Lex.html#tokens">tokens</a></li>
+            
+            </ul>
+            <ul class="typedefs itemMembers">
+            
+            <span class="subtitle">Typedefs</span>
+            
+                <li data-name="Lex~ActionCallback"><a href="Lex.html#ActionCallback">ActionCallback</a></li>
+            
+                <li data-name="Lex~ErrorCallback"><a href="Lex.html#ErrorCallback">ErrorCallback</a></li>
+            
+                <li data-name="Lex~Options"><a href="Lex.html#Options">Options</a></li>
+            
+                <li data-name="Lex~State"><a href="Lex.html#State">State</a></li>
+            
+            </ul>
+            <ul class="methods itemMembers">
+            
+            <span class="subtitle">Methods</span>
+            
+                <li data-name="Lex.handleError"><a href="Lex.html#handleError">handleError</a></li>
+            
+                <li data-name="Lex#addState"><a href="Lex.html#addState">addState</a></li>
+            
+                <li data-name="Lex#currentState"><a href="Lex.html#currentState">currentState</a></li>
+            
+                <li data-name="Lex#getCurrentColumn"><a href="Lex.html#getCurrentColumn">getCurrentColumn</a></li>
+            
+                <li data-name="Lex#getCurrentLine"><a href="Lex.html#getCurrentLine">getCurrentLine</a></li>
+            
+                <li data-name="Lex#lex"><a href="Lex.html#lex">lex</a></li>
+            
+                <li data-name="Lex#newError"><a href="Lex.html#newError">newError</a></li>
+            
+                <li data-name="Lex#options"><a href="Lex.html#options">options</a></li>
+            
+                <li data-name="Lex#popState"><a href="Lex.html#popState">popState</a></li>
+            
+                <li data-name="Lex#pushState"><a href="Lex.html#pushState">pushState</a></li>
+            
+                <li data-name="Lex#resolveNS"><a href="Lex.html#resolveNS">resolveNS</a></li>
+            
+                <li data-name="Lex#resolveSiblingNS"><a href="Lex.html#resolveSiblingNS">resolveSiblingNS</a></li>
+            
+                <li data-name="Lex#setRule"><a href="Lex.html#setRule">setRule</a></li>
+            
+                <li data-name="Lex#setSource"><a href="Lex.html#setSource">setSource</a></li>
+            
+                <li data-name="Lex#setState"><a href="Lex.html#setState">setState</a></li>
+            
+            </ul>
+            <ul class="events itemMembers">
+            
+            </ul>
+        </li>
+    
+        <li class="item" data-name="Lex.LexError">
+            <span class="title">
+                <a href="Lex.LexError.html">Lex.LexError</a>
+                
+            </span>
+            <ul class="members itemMembers">
+            
+            </ul>
+            <ul class="typedefs itemMembers">
+            
+            </ul>
+            <ul class="methods itemMembers">
+            
+            </ul>
+            <ul class="events itemMembers">
+            
+            </ul>
+        </li>
+    
+        <li class="item" data-name="Rule">
+            <span class="title">
+                <a href="Rule.html">Rule</a>
+                
+            </span>
+            <ul class="members itemMembers">
+            
+            <span class="subtitle">Members</span>
+            
+                <li data-name="Rule.create"><a href="Rule.html#create">create</a></li>
+            
+                <li data-name="Rule.defaultOptions"><a href="Rule.html#defaultOptions">defaultOptions</a></li>
+            
+                <li data-name="Rule.registerMatch"><a href="Rule.html#registerMatch">registerMatch</a></li>
+            
+                <li data-name="Rule.ReMix"><a href="Rule.html#ReMix">ReMix</a></li>
+            
+                <li data-name="Rule#actions"><a href="Rule.html#actions">actions</a></li>
+            
+                <li data-name="Rule#matcher"><a href="Rule.html#matcher">matcher</a></li>
+            
+                <li data-name="Rule#matches"><a href="Rule.html#matches">matches</a></li>
+            
+                <li data-name="Rule#tokens"><a href="Rule.html#tokens">tokens</a></li>
+            
+            </ul>
+            <ul class="typedefs itemMembers">
+            
+            <span class="subtitle">Typedefs</span>
+            
+                <li data-name="Rule~Argument"><a href="Rule.html#Argument">Argument</a></li>
+            
+                <li data-name="Rule~Composition"><a href="Rule.html#Composition">Composition</a></li>
+            
+                <li data-name="Rule~ErrorCallback"><a href="Rule.html#ErrorCallback">ErrorCallback</a></li>
+            
+                <li data-name="Rule~Options"><a href="Rule.html#Options">Options</a></li>
+            
+                <li data-name="Rule~SetupCallback"><a href="Rule.html#SetupCallback">SetupCallback</a></li>
+            
+                <li data-name="Rule~Token"><a href="Rule.html#Token">Token</a></li>
+            
+                <li data-name="Rule~Type"><a href="Rule.html#Type">Type</a></li>
+            
+                <li data-name="Rule~TypeAPI"><a href="Rule.html#TypeAPI">TypeAPI</a></li>
+            
+                <li data-name="Rule~TypeCreateCallback"><a href="Rule.html#TypeCreateCallback">TypeCreateCallback</a></li>
+            
+            </ul>
+            <ul class="methods itemMembers">
+            
+            <span class="subtitle">Methods</span>
+            
+                <li data-name="Rule.defaultAction"><a href="Rule.html#defaultAction">defaultAction</a></li>
+            
+                <li data-name="Rule.handleError"><a href="Rule.html#handleError">handleError</a></li>
+            
+                <li data-name="Rule.registerType"><a href="Rule.html#registerType">registerType</a></li>
+            
+                <li data-name="Rule.type"><a href="Rule.html#type">type</a></li>
+            
+                <li data-name="Rule#action"><a href="Rule.html#action">action</a></li>
+            
+                <li data-name="Rule#compose"><a href="Rule.html#compose">compose</a></li>
+            
+                <li data-name="Rule#dump"><a href="Rule.html#dump">dump</a></li>
+            
+                <li data-name="Rule#exclusive"><a href="Rule.html#exclusive">exclusive</a></li>
+            
+                <li data-name="Rule#forEach"><a href="Rule.html#forEach">forEach</a></li>
+            
+                <li data-name="Rule#getOption"><a href="Rule.html#getOption">getOption</a></li>
+            
+                <li data-name="Rule#match"><a href="Rule.html#match">match</a></li>
+            
+                <li data-name="Rule#options"><a href="Rule.html#options">options</a></li>
+            
+                <li data-name="Rule#parent"><a href="Rule.html#parent">parent</a></li>
+            
+                <li data-name="Rule#pushAction"><a href="Rule.html#pushAction">pushAction</a></li>
+            
+                <li data-name="Rule#resolveNS"><a href="Rule.html#resolveNS">resolveNS</a></li>
+            
+                <li data-name="Rule#resolveParentNS"><a href="Rule.html#resolveParentNS">resolveParentNS</a></li>
+            
+                <li data-name="Rule#resolveSiblingNS"><a href="Rule.html#resolveSiblingNS">resolveSiblingNS</a></li>
+            
+                <li data-name="Rule#root"><a href="Rule.html#root">root</a></li>
+            
+                <li data-name="Rule#rule"><a href="Rule.html#rule">rule</a></li>
+            
+                <li data-name="Rule#scope"><a href="Rule.html#scope">scope</a></li>
+            
+                <li data-name="Rule#skip"><a href="Rule.html#skip">skip</a></li>
+            
+                <li data-name="Rule#tokenNamespace"><a href="Rule.html#tokenNamespace">tokenNamespace</a></li>
+            
+            </ul>
+            <ul class="events itemMembers">
+            
+            </ul>
+        </li>
+    
+    </ul>
+</div>
+    <div class="main">
+        <h1 class="page-title" data-filename="Lex.html">Class: Lex</h1>
+        
+
+
+
+<section>
+    
+<header>
+    <h2>
+    Lex
+    </h2>
+    
+</header>  
+
+<article>
+    <div class="container-overview">
+    
+    
+    
+        
+<dt>
+    <div class="nameContainer">
+        <h4 class="name" id="Lex">
+            
+            new Lex<span class="signature">(<span class="optional">opt</span>)</span>
+        </h4>
+    
+        
+        <div class="tag-source">
+            lib/index.js, line 40
+        </div>
+        
+    </div>
+
+    
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>Construct a new Lex object with the given options.</p>
+    </div>
+    
+
+    
+    
+    
+    
+    
+        
+
+<table class="params">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+		
+		<th>Type</th>
+		
+		
+		<th>Default</th>
+		
+		
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+	
+	<tbody>
+	
+	
+        <tr>
+            
+                <td class="name"><code>opt</code></td>
+            
+            
+            <td class="type">
+            
+                
+<span class="param-type"><a href="Lex.html#Options">Lex~Options</a></span>
+
+
+            
+            </td>
+            
+            
+                <td class="default">
+                
+                    Lex.defaultOptions
+                
+                </td>
+            
+            
+            <td class="description last">
+                
+                    
+                        <span class="optional">optional</span>
+                    
+                    
+                        
+                    
+                
+                <p>Lexer options</p></td>
+        </tr>
+	
+	
+	</tbody>
+</table>
+    
+    
+    
+<dl class="details">
+    
+        
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+</dl>
+
+    
+    
+
+    
+
+    
+    
+    
+    
+    
+    
+    
+</dd>
+
+    
+    </div>
+    
+    
+    
+    
+    
+    
+    
+    
+        <h3 class="subsection-title">Classes</h3>
+        
+        <dl>
+            <dt><a href="Lex.LexError.html">LexError</a></dt>
+            <dd></dd>
+        </dl>
+    
+    
+    
+    
+    
+        <h3 class="subsection-title">Members</h3>
+        
+        <dl>
+            
+<dt>
+    <div class="nameContainer">
+        <h4 class="name" id="defaultOptions"><span class="type-signature static">static</span>Lex.defaultOptions<span class="type-signature type lex~options"><a href="Lex.html#Options">Lex~Options</a></span> </h4>
+    </div>
+    
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>Default Lex options. Change these to change for all future
+instanciations.</p>
+    </div>
+    
+    
+    
+<dl class="details">
+    
+        
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+</dl>
+
+    
+    
+</dd>
+
+        
+            
+<dt>
+    <div class="nameContainer">
+        <h4 class="name" id="index">index<span class="type-signature type number">Number</span> </h4>
+    </div>
+    
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>The current index into <code>source</code> were lexing left off.</p>
+    </div>
+    
+    
+    
+<dl class="details">
+    
+        
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+</dl>
+
+    
+    
+</dd>
+
+        
+            
+<dt>
+    <div class="nameContainer">
+        <h4 class="name" id="source">source<span class="type-signature type string">String</span> <span class="type-signature type null">null</span> </h4>
+    </div>
+    
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>The current source we are lexing. Set with <a href="Lex.html#setSource">Lex#setSource</a>.</p>
+    </div>
+    
+    
+    
+<dl class="details">
+    
+        
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+</dl>
+
+    
+    
+</dd>
+
+        
+            
+<dt>
+    <div class="nameContainer">
+        <h4 class="name" id="tokens">tokens<span class="type-signature type array.<string>">Array.&lt;String></span> </h4>
+    </div>
+    
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>Current collected tokens, collected and returned one at a time.</p>
+    </div>
+    
+    
+    
+<dl class="details">
+    
+        
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+</dl>
+
+    
+    
+</dd>
+
+        </dl>
+    
+    
+    
+        <h3 class="subsection-title">Methods</h3>
+        
+        <dl>
+            
+<dt>
+    <div class="nameContainer">
+        <h4 class="name" id="handleError">
+            
+            <span class="type-signature static">static</span>Lex.handleError<span class="signature">()</span>
+        </h4>
+    
+        
+        <div class="tag-source">
+            lib/index.js, line 82
+        </div>
+        
+    </div>
+
+    
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>Default error handler. Can be set in options or overriden here for all.</p>
+    </div>
+    
+
+    
+    
+    
+    
+    
+    
+    
+<dl class="details">
+    
+        
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+</dl>
+
+    
+    
+
+    
+
+    
+    
+    
+    
+    
+    
+    
+</dd>
+
+        
+            
+<dt>
+    <div class="nameContainer">
+        <h4 class="name" id="addState">
+            
+            addState<span class="signature">(state)</span><span class="glyphicon glyphicon-circle-arrow-right"></span><span class="type-signature returnType">{<a href="Lex.html">Lex</a>}</span>
+        </h4>
+    
+        
+        <div class="tag-source">
+            lib/index.js, line 151
+        </div>
+        
+    </div>
+
+    
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>Low level method to add a state.</p>
+    </div>
+    
+
+    
+    
+    
+    
+    
+        
+
+<table class="params">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+		
+		<th>Type</th>
+		
+		
+		
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+	
+	<tbody>
+	
+	
+        <tr>
+            
+                <td class="name"><code>state</code></td>
+            
+            
+            <td class="type">
+            
+                
+<span class="param-type"><a href="Lex.html#State">Lex~State</a></span>
+
+
+            
+            </td>
+            
+            
+            
+            <td class="description last">
+                
+                </td>
+        </tr>
+	
+	
+	</tbody>
+</table>
+    
+    
+    
+<dl class="details">
+    
+        
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+</dl>
+
+    
+    
+
+    
+
+    
+    
+    
+    
+    
+    
+    
+
+
+    
+    
+    
+</dd>
+
+        
+            
+<dt>
+    <div class="nameContainer">
+        <h4 class="name" id="currentState">
+            
+            currentState<span class="signature">()</span><span class="glyphicon glyphicon-circle-arrow-right"></span><span class="type-signature returnType">{<a href="Lex.html#State">Lex~State</a>}</span>
+        </h4>
+    
+        
+        <div class="tag-source">
+            lib/index.js, line 183
+        </div>
+        
+    </div>
+
+    
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>Retrieve the current <a href="Lex.html#State">Lex~State</a> object or null if no current state is set.</p>
+    </div>
+    
+
+    
+    
+    
+    
+    
+    
+    
+<dl class="details">
+    
+        
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+</dl>
+
+    
+    
+
+    
+
+    
+    
+    
+    
+    
+    
+    
+
+
+    
+    
+    
+</dd>
+
+        
+            
+<dt>
+    <div class="nameContainer">
+        <h4 class="name" id="getCurrentColumn">
+            
+            getCurrentColumn<span class="signature">()</span><span class="glyphicon glyphicon-circle-arrow-right"></span><span class="type-signature returnType">{Number}</span>
+        </h4>
+    
+        
+        <div class="tag-source">
+            lib/index.js, line 312
+        </div>
+        
+    </div>
+
+    
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>Retrieve the current column position</p>
+    </div>
+    
+
+    
+    
+    
+    
+    
+    
+    
+<dl class="details">
+    
+        
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+</dl>
+
+    
+    
+
+    
+
+    
+    
+    
+    
+    
+    
+    
+
+
+<h5>Returns:</h5>
+position in <code>source</code></li>
+</ul>
+<br />
+
+    
+    
+    
+</dd>
+
+        
+            
+<dt>
+    <div class="nameContainer">
+        <h4 class="name" id="getCurrentLine">
+            
+            getCurrentLine<span class="signature">()</span><span class="glyphicon glyphicon-circle-arrow-right"></span><span class="type-signature returnType">{Number}</span>
+        </h4>
+    
+        
+        <div class="tag-source">
+            lib/index.js, line 320
+        </div>
+        
+    </div>
+
+    
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>Retrieve the current line number.</p>
+    </div>
+    
+
+    
+    
+    
+    
+    
+    
+    
+<dl class="details">
+    
+        
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+</dl>
+
+    
+    
+
+    
+
+    
+    
+    
+    
+    
+    
+    
+
+
+<h5>Returns:</h5>
+line number in <code>source</code></li>
+</ul>
+<br />
+
+    
+    
+    
+</dd>
+
+        
+            
+<dt>
+    <div class="nameContainer">
+        <h4 class="name" id="lex">
+            
+            lex<span class="signature">()</span><span class="glyphicon glyphicon-circle-arrow-right"></span><span class="type-signature returnType">{String}</span>
+        </h4>
+    
+        
+        <div class="tag-source">
+            lib/index.js, line 244
+        </div>
+        
+    </div>
+
+    
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>Main entry point for lexing. Performs one iteraction, call until false to lex entire source.</p>
+    </div>
+    
+
+    
+    
+    
+    
+    
+    
+    
+<dl class="details">
+    
+        
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+</dl>
+
+    
+    
+
+    
+
+    
+    
+    
+    
+    
+    
+    
+
+
+<h5>Returns:</h5>
+token returned by last match.
+<br />
+
+    
+    
+    
+</dd>
+
+        
+            
+<dt>
+    <div class="nameContainer">
+        <h4 class="name" id="newError">
+            
+            newError<span class="signature">(message)</span>
+        </h4>
+    
+        
+        <div class="tag-source">
+            lib/index.js, line 328
+        </div>
+        
+    </div>
+
+    
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>Constructs a new <a href="Lex.LexError.html">Lex.LexError</a> object with the given message. Current line number and column numbers are set for you.</p>
+    </div>
+    
+
+    
+    
+    
+    
+    
+        
+
+<table class="params">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+		
+		<th>Type</th>
+		
+		
+		
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+	
+	<tbody>
+	
+	
+        <tr>
+            
+                <td class="name"><code>message</code></td>
+            
+            
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+            
+            
+            
+            <td class="description last">
+                
+                <p>the error message</p></td>
+        </tr>
+	
+	
+	</tbody>
+</table>
+    
+    
+    
+<dl class="details">
+    
+        
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+</dl>
+
+    
+    
+
+    
+
+    
+    
+    
+    
+    
+    
+    
+
+
+<h5>Returns:</h5>
+Lex.LexError}
+<br />
+
+    
+    
+    
+</dd>
+
+        
+            
+<dt>
+    <div class="nameContainer">
+        <h4 class="name" id="options">
+            
+            options<span class="signature">(<span class="optional">opt</span>)</span><span class="glyphicon glyphicon-circle-arrow-right"></span><span class="type-signature returnType">{<a href="Lex.html#Options">Lex~Options</a>}</span>
+        </h4>
+    
+        
+        <div class="tag-source">
+            lib/index.js, line 112
+        </div>
+        
+    </div>
+
+    
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>Set/retrieve the current options.</p>
+    </div>
+    
+
+    
+    
+    
+    
+    
+        
+
+<table class="params">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+		
+		<th>Type</th>
+		
+		
+		
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+	
+	<tbody>
+	
+	
+        <tr>
+            
+                <td class="name"><code>opt</code></td>
+            
+            
+            <td class="type">
+            
+                
+<span class="param-type"><a href="Lex.html#Options">Lex~Options</a></span>
+
+
+            
+            </td>
+            
+            
+            
+            <td class="description last">
+                
+                    
+                        <span class="optional">optional</span>
+                    
+                    
+                        
+                    
+                
+                <p>merged with current options if present</p></td>
+        </tr>
+	
+	
+	</tbody>
+</table>
+    
+    
+    
+<dl class="details">
+    
+        
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+</dl>
+
+    
+    
+
+    
+
+    
+    
+    
+    
+    
+    
+    
+
+
+<h5>Returns:</h5>
+options object.</li>
+</ul>
+<br />
+
+    
+    
+    
+</dd>
+
+        
+            
+<dt>
+    <div class="nameContainer">
+        <h4 class="name" id="popState">
+            
+            popState<span class="signature">()</span><span class="glyphicon glyphicon-circle-arrow-right"></span><span class="type-signature returnType">{String}</span>
+        </h4>
+    
+        
+        <div class="tag-source">
+            lib/index.js, line 192
+        </div>
+        
+    </div>
+
+    
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>Pop the <a href="Lex.html#State">Lex~State</a> stack.</p>
+    </div>
+    
+
+    
+    
+    
+    
+    
+    
+    
+<dl class="details">
+    
+        
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+</dl>
+
+    
+    
+
+    
+
+    
+    
+    
+    
+    
+    
+    
+
+
+<h5>Returns:</h5>
+- namespace of the state <code>pop()</code>ed
+<br />
+
+    
+    
+    
+</dd>
+
+        
+            
+<dt>
+    <div class="nameContainer">
+        <h4 class="name" id="pushState">
+            
+            pushState<span class="signature">(namespace)</span><span class="glyphicon glyphicon-circle-arrow-right"></span><span class="type-signature returnType">{<a href="Lex.html">Lex</a>}</span>
+        </h4>
+    
+        
+        <div class="tag-source">
+            lib/index.js, line 172
+        </div>
+        
+    </div>
+
+    
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>Push namespace onto the current state stack</p>
+    </div>
+    
+
+    
+    
+    
+    
+    
+        
+
+<table class="params">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+		
+		<th>Type</th>
+		
+		
+		
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+	
+	<tbody>
+	
+	
+        <tr>
+            
+                <td class="name"><code>namespace</code></td>
+            
+            
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+            
+            
+            
+            <td class="description last">
+                
+                </td>
+        </tr>
+	
+	
+	</tbody>
+</table>
+    
+    
+    
+<dl class="details">
+    
+        
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+</dl>
+
+    
+    
+
+    
+
+    
+    
+    
+    
+    
+    
+    
+
+
+    
+    
+    
+</dd>
+
+        
+            
+<dt>
+    <div class="nameContainer">
+        <h4 class="name" id="resolveNS">
+            
+            resolveNS<span class="signature">(namespace)</span><span class="glyphicon glyphicon-circle-arrow-right"></span><span class="type-signature returnType">{<a href="Lex.html#State">Lex~State</a>|null}</span>
+        </h4>
+    
+        
+        <div class="tag-source">
+            lib/index.js, line 205
+        </div>
+        
+    </div>
+
+    
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>resolves a namespace to a <a href="Lex.html#State">Lex~State</a> object. Assumes it could
+possible be a child of the current state and tries to do a relative
+resolution first.</p>
+    </div>
+    
+
+    
+    
+    
+    
+    
+        
+
+<table class="params">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+		
+		<th>Type</th>
+		
+		
+		
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+	
+	<tbody>
+	
+	
+        <tr>
+            
+                <td class="name"><code>namespace</code></td>
+            
+            
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+            
+            
+            
+            <td class="description last">
+                
+                <p>the namespace to resolve</p></td>
+        </tr>
+	
+	
+	</tbody>
+</table>
+    
+    
+    
+<dl class="details">
+    
+        
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+</dl>
+
+    
+    
+
+    
+
+    
+    
+    
+    
+    
+    
+    
+
+
+<h5>Returns:</h5>
+<a href="Lex.html#State">Lex~State</a> represented by namespace.
+<br />
+
+    
+    
+    
+</dd>
+
+        
+            
+<dt>
+    <div class="nameContainer">
+        <h4 class="name" id="resolveSiblingNS">
+            
+            resolveSiblingNS<span class="signature">(namespace)</span><span class="glyphicon glyphicon-circle-arrow-right"></span><span class="type-signature returnType">{<a href="Lex.html#State">Lex~State</a>|null}</span>
+        </h4>
+    
+        
+        <div class="tag-source">
+            lib/index.js, line 220
+        </div>
+        
+    </div>
+
+    
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>resolves a namespace to a <a href="Lex.html#State">Lex~State</a> object. Assumes it could possibly be a sibling of the current state and tries to do a relative resoltion first.</p>
+    </div>
+    
+
+    
+    
+    
+    
+    
+        
+
+<table class="params">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+		
+		<th>Type</th>
+		
+		
+		
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+	
+	<tbody>
+	
+	
+        <tr>
+            
+                <td class="name"><code>namespace</code></td>
+            
+            
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+            
+            
+            
+            <td class="description last">
+                
+                <p>the namespace to resolve</p></td>
+        </tr>
+	
+	
+	</tbody>
+</table>
+    
+    
+    
+<dl class="details">
+    
+        
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+</dl>
+
+    
+    
+
+    
+
+    
+    
+    
+    
+    
+    
+    
+
+
+<h5>Returns:</h5>
+<a href="Lex.html#State">Lex~State</a> respresented by namespace or null if namespace could not be resolved.
+<br />
+
+    
+    
+    
+</dd>
+
+        
+            
+<dt>
+    <div class="nameContainer">
+        <h4 class="name" id="setRule">
+            
+            setRule<span class="signature">(rule)</span><span class="glyphicon glyphicon-circle-arrow-right"></span><span class="type-signature returnType">{<a href="Lex.html">Lex</a>}</span>
+        </h4>
+    
+        
+        <div class="tag-source">
+            lib/index.js, line 123
+        </div>
+        
+    </div>
+
+    
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>Main entry point. Add your root <a href="Rule.html">Rule</a> using this method.</p>
+    </div>
+    
+
+    
+    
+    
+    
+    
+        
+
+<table class="params">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+		
+		<th>Type</th>
+		
+		
+		
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+	
+	<tbody>
+	
+	
+        <tr>
+            
+                <td class="name"><code>rule</code></td>
+            
+            
+            <td class="type">
+            
+                
+<span class="param-type"><a href="Rule.html">Rule</a></span>
+
+
+            
+            </td>
+            
+            
+            
+            <td class="description last">
+                
+                <p>sets the rule for this lexer.</p></td>
+        </tr>
+	
+	
+	</tbody>
+</table>
+    
+    
+    
+<dl class="details">
+    
+        
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+</dl>
+
+    
+    
+
+    
+
+    
+    
+    
+    
+    
+    
+    
+
+
+    
+    
+    
+</dd>
+
+        
+            
+<dt>
+    <div class="nameContainer">
+        <h4 class="name" id="setSource">
+            
+            setSource<span class="signature">(source)</span><span class="glyphicon glyphicon-circle-arrow-right"></span><span class="type-signature returnType">{<a href="Lex.html">Lex</a>}</span>
+        </h4>
+    
+        
+        <div class="tag-source">
+            lib/index.js, line 235
+        </div>
+        
+    </div>
+
+    
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>Sets the source to lex, clears previous index</p>
+    </div>
+    
+
+    
+    
+    
+    
+    
+        
+
+<table class="params">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+		
+		<th>Type</th>
+		
+		
+		
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+	
+	<tbody>
+	
+	
+        <tr>
+            
+                <td class="name"><code>source</code></td>
+            
+            
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+            
+            
+            
+            <td class="description last">
+                
+                <p>source to lex</p></td>
+        </tr>
+	
+	
+	</tbody>
+</table>
+    
+    
+    
+<dl class="details">
+    
+        
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+</dl>
+
+    
+    
+
+    
+
+    
+    
+    
+    
+    
+    
+    
+
+
+    
+    
+    
+</dd>
+
+        
+            
+<dt>
+    <div class="nameContainer">
+        <h4 class="name" id="setState">
+            
+            setState<span class="signature">(namespace)</span><span class="glyphicon glyphicon-circle-arrow-right"></span><span class="type-signature returnType">{<a href="Lex.html">Lex</a>}</span>
+        </h4>
+    
+        
+        <div class="tag-source">
+            lib/index.js, line 160
+        </div>
+        
+    </div>
+
+    
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>Set the current state.</p>
+    </div>
+    
+
+    
+    
+    
+    
+    
+        
+
+<table class="params">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+		
+		<th>Type</th>
+		
+		
+		
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+	
+	<tbody>
+	
+	
+        <tr>
+            
+                <td class="name"><code>namespace</code></td>
+            
+            
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+            
+            
+            
+            <td class="description last">
+                
+                </td>
+        </tr>
+	
+	
+	</tbody>
+</table>
+    
+    
+    
+<dl class="details">
+    
+        
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+</dl>
+
+    
+    
+
+    
+
+    
+    
+    
+    
+    
+    
+    
+
+
+    
+    
+    
+</dd>
+
+        </dl>
+    
+    
+    
+        <h3 class="subsection-title">Type Definitions</h3>
+        
+        <dl>
+                
+<dt>
+    <div class="nameContainer">
+        <h4 class="name" id="ActionCallback">
+            
+            ActionCallback<span class="signature">(yytext, match, namespace, tokens)</span><span class="glyphicon glyphicon-circle-arrow-right"></span><span class="type-signature returnType">{String|Array.&lt;String>|*}</span>
+        </h4>
+    
+        
+        <div class="tag-source">
+            lib/index.js, line 376
+        </div>
+        
+    </div>
+
+    
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>Callback used during lexing to return tokens and/or push/pop/set state.</p>
+    </div>
+    
+
+    
+    
+    
+    
+    
+        
+
+<table class="params">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+		
+		<th>Type</th>
+		
+		
+		
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+	
+	<tbody>
+	
+	
+        <tr>
+            
+                <td class="name"><code>yytext</code></td>
+            
+            
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+            
+            
+            
+            <td class="description last">
+                
+                <p>The full text which matched.</p></td>
+        </tr>
+	
+	
+	
+        <tr>
+            
+                <td class="name"><code>match</code></td>
+            
+            
+            <td class="type">
+            
+                
+<span class="param-type">Array.&lt;String></span>
+
+
+            
+            </td>
+            
+            
+            
+            <td class="description last">
+                
+                <p>Any <code>()</code> matches or empty Array if no matches.</p></td>
+        </tr>
+	
+	
+	
+        <tr>
+            
+                <td class="name"><code>namespace</code></td>
+            
+            
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+            
+            
+            
+            <td class="description last">
+                
+                <p>The namespace for this match.</p></td>
+        </tr>
+	
+	
+	
+        <tr>
+            
+                <td class="name"><code>tokens</code></td>
+            
+            
+            <td class="type">
+            
+                
+<span class="param-type">Array.&lt;String></span>
+
+
+            
+            </td>
+            
+            
+            
+            <td class="description last">
+                
+                <p>Any tokens there were setup for this State.</p></td>
+        </tr>
+	
+	
+	</tbody>
+</table>
+    
+    
+    
+<dl class="details">
+    
+        
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+</dl>
+
+    
+    
+
+    
+
+    
+    
+    
+    
+    
+    
+    
+
+
+<h5>Returns:</h5>
+return value which is an Array or String
+will be taken as tokens to be returned. Any other return is ignored.
+<br />
+
+    
+    
+    
+        <h5>Example</h5>
+        
+
+    
+    <pre class="prettyprint"><code>rule('myRule').action(function (yytext, match, namespace, tokens) {
+  this.yytext = yytext;
+  return tokens;
+});</code></pre>
+    
+
+    
+</dd>
+
+            
+                
+<dt>
+    <div class="nameContainer">
+        <h4 class="name" id="ErrorCallback">
+            
+            ErrorCallback<span class="signature">(error)</span>
+        </h4>
+    
+        
+        <div class="tag-source">
+            lib/index.js, line 404
+        </div>
+        
+    </div>
+
+    
+</dt>
+<dd>
+    
+    
+
+    
+    
+    
+    
+    
+        
+
+<table class="params">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+		
+		<th>Type</th>
+		
+		
+		
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+	
+	<tbody>
+	
+	
+        <tr>
+            
+                <td class="name"><code>error</code></td>
+            
+            
+            <td class="type">
+            
+                
+<span class="param-type">Error</span>
+|
+
+<span class="param-type"><a href="Lex.LexError.html">Lex.LexError</a></span>
+
+
+            
+            </td>
+            
+            
+            
+            <td class="description last">
+                
+                <p>error object to handle</p></td>
+        </tr>
+	
+	
+	</tbody>
+</table>
+    
+    
+    
+<dl class="details">
+    
+        
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+</dl>
+
+    
+    
+
+    
+
+    
+    
+    
+    
+    
+    
+    
+        <h5>Example</h5>
+        
+
+    
+    <pre class="prettyprint"><code>var lex = new Lex({
+  handleError: function (error) {
+    throw error;
+  }
+});</code></pre>
+    
+
+    
+</dd>
+
+            
+                
+<dt>
+    <div class="nameContainer">
+        <h4 class="name" id="Options">Options<span class="type-signature type object">Object</span> </h4>
+    </div>
+    
+    
+</dt>
+<dd>
+    
+    
+    
+<dl class="details">
+    
+        
+        <h5 class="subsection-title">Properties:</h5>
+        
+        <dl>
+
+<table class="props">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+		
+		<th>Type</th>
+		
+		
+		
+		
+		<th>Default</th>
+		
+		
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+	
+	<tbody>
+	
+	
+        <tr>
+            
+                <td class="name"><code>handleError</code></td>
+            
+            
+            <td class="type">
+            
+                
+<span class="param-type"><a href="Lex.html#ErrorCallback">Lex~ErrorCallback</a></span>
+
+
+            
+            </td>
+            
+            
+            
+            
+                <td class="default">
+                
+                                             
+            <td class="description last"><p>Lex.handleError - Sets the callback for
+handling errors. Defaults to throwing an error.</p></td>
+        </tr>
+	
+	
+	
+        <tr>
+            
+                <td class="name"><code>disableNS</code></td>
+            
+            
+            <td class="type">
+            
+                
+<span class="param-type">Boolean</span>
+
+
+            
+            </td>
+            
+            
+            
+            
+                <td class="default">
+                
+                    false
+                
+                </td>
+            
+            
+            <td class="description last"><p>disable namespaces in match returns. This
+flattens everything into it's singlular unnamespaced name.</p></td>
+        </tr>
+	
+	
+	</tbody>
+</table></dl>
+        
+    
+        
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+</dl>
+
+    
+    
+</dd>
+
+            
+                
+<dt>
+    <div class="nameContainer">
+        <h4 class="name" id="State">State<span class="type-signature type object">Object</span> </h4>
+    </div>
+    
+    
+</dt>
+<dd>
+    
+    
+    
+<dl class="details">
+    
+        
+        <h5 class="subsection-title">Properties:</h5>
+        
+        <dl>
+
+<table class="props">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+		
+		<th>Type</th>
+		
+		
+		
+		
+		
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+	
+	<tbody>
+	
+	
+        <tr>
+            
+                <td class="name"><code>parent</code></td>
+            
+            
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+            
+            
+            
+            
+            
+            <td class="description last"><p>parent namespace</p></td>
+        </tr>
+	
+	
+	
+        <tr>
+            
+                <td class="name"><code>next</code></td>
+            
+            
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+            
+            
+            
+            
+            
+            <td class="description last"><p>the next siblings namespace</p></td>
+        </tr>
+	
+	
+	
+        <tr>
+            
+                <td class="name"><code>namespace</code></td>
+            
+            
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+            
+            
+            
+            
+            
+            <td class="description last"><p>the namespace of this state</p></td>
+        </tr>
+	
+	
+	
+        <tr>
+            
+                <td class="name"><code>matcher</code></td>
+            
+            
+            <td class="type">
+            
+                
+<span class="param-type">ReMix</span>
+
+
+            
+            </td>
+            
+            
+            
+            
+            
+            <td class="description last"><p>the ReMix object for matching
+   this state.</p></td>
+        </tr>
+	
+	
+	
+        <tr>
+            
+                <td class="name"><code>sep</code></td>
+            
+            
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+            
+            
+            
+            
+            
+            <td class="description last"><p>namespace delimiter for this state</p></td>
+        </tr>
+	
+	
+	
+        <tr>
+            
+                <td class="name"><code>tokens</code></td>
+            
+            
+            <td class="type">
+            
+                
+<span class="param-type">Array</span>
+
+
+            
+            </td>
+            
+            
+            
+            
+            
+            <td class="description last"><p>tokens returned by this state</p></td>
+        </tr>
+	
+	
+	
+        <tr>
+            
+                <td class="name"><code>actions</code></td>
+            
+            
+            <td class="type">
+            
+                
+<span class="param-type">Array.&lt;<a href="Lex.html#ActionCallback">Lex~ActionCallback</a>></span>
+
+
+            
+            </td>
+            
+            
+            
+            
+            
+            <td class="description last"><p>array of action callbacks to be
+called on a match.</p></td>
+        </tr>
+	
+	
+	</tbody>
+</table></dl>
+        
+    
+        
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+</dl>
+
+    
+    
+</dd>
+
+            </dl>
+    
+    
+    
+</article>
+
+</section>  
+
+
+
+
+
+        
+
+        <footer>
+            Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.3.0-alpha11</a> on Tue Dec 09 2014 04:22:52 GMT+0000 (UTC)
+        </footer>
+    </div>
+</div>
+<script>prettyPrint();</script>
+<script src="scripts/linenumber.js"></script>
+<script src="scripts/main.js"></script>
+</body>
+</html>
