@@ -83,8 +83,6 @@
             
                 <li data-name="Lex.handleError"><a href="Lex.html#handleError">handleError</a></li>
             
-                <li data-name="Lex#addState"><a href="Lex.html#addState">addState</a></li>
-            
                 <li data-name="Lex#currentState"><a href="Lex.html#currentState">currentState</a></li>
             
                 <li data-name="Lex#getCurrentColumn"><a href="Lex.html#getCurrentColumn">getCurrentColumn</a></li>
@@ -271,7 +269,7 @@
     
         
         <div class="tag-source">
-            lib/index.js, line 40
+            lib/index.js, line 48
         </div>
         
     </div>
@@ -388,6 +386,20 @@
     
     
     
+    
+        <h5>Example</h5>
+        
+
+    
+    <pre class="prettyprint"><code>// defaults
+var lexer = new Lex({
+  handleError: function (error) {
+    throw error;
+  },
+  disableNS: false
+});</code></pre>
+    
+
     
 </dd>
 
@@ -612,7 +624,7 @@ instanciations.</p>
     
         
         <div class="tag-source">
-            lib/index.js, line 82
+            lib/index.js, line 90
         </div>
         
     </div>
@@ -676,127 +688,6 @@ instanciations.</p>
             
 <dt>
     <div class="nameContainer">
-        <h4 class="name" id="addState">
-            
-            addState<span class="signature">(state)</span><span class="glyphicon glyphicon-circle-arrow-right"></span><span class="type-signature returnType">{<a href="Lex.html">Lex</a>}</span>
-        </h4>
-    
-        
-        <div class="tag-source">
-            lib/index.js, line 151
-        </div>
-        
-    </div>
-
-    
-</dt>
-<dd>
-    
-    
-    <div class="description">
-        <p>Low level method to add a state.</p>
-    </div>
-    
-
-    
-    
-    
-    
-    
-        
-
-<table class="params">
-    <thead>
-	<tr>
-		
-		<th>Name</th>
-		
-		
-		<th>Type</th>
-		
-		
-		
-		<th class="last">Description</th>
-	</tr>
-	</thead>
-	
-	<tbody>
-	
-	
-        <tr>
-            
-                <td class="name"><code>state</code></td>
-            
-            
-            <td class="type">
-            
-                
-<span class="param-type"><a href="Lex.html#State">Lex~State</a></span>
-
-
-            
-            </td>
-            
-            
-            
-            <td class="description last">
-                
-                </td>
-        </tr>
-	
-	
-	</tbody>
-</table>
-    
-    
-    
-<dl class="details">
-    
-        
-    
-    
-    
-
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-</dl>
-
-    
-    
-
-    
-
-    
-    
-    
-    
-    
-    
-    
-
-
-    
-    
-    
-</dd>
-
-        
-            
-<dt>
-    <div class="nameContainer">
         <h4 class="name" id="currentState">
             
             currentState<span class="signature">()</span><span class="glyphicon glyphicon-circle-arrow-right"></span><span class="type-signature returnType">{<a href="Lex.html#State">Lex~State</a>}</span>
@@ -804,7 +695,7 @@ instanciations.</p>
     
         
         <div class="tag-source">
-            lib/index.js, line 183
+            lib/index.js, line 210
         </div>
         
     </div>
@@ -880,7 +771,7 @@ instanciations.</p>
     
         
         <div class="tag-source">
-            lib/index.js, line 312
+            lib/index.js, line 339
         </div>
         
     </div>
@@ -961,7 +852,7 @@ position in <code>source</code></li>
     
         
         <div class="tag-source">
-            lib/index.js, line 320
+            lib/index.js, line 347
         </div>
         
     </div>
@@ -1042,7 +933,7 @@ line number in <code>source</code></li>
     
         
         <div class="tag-source">
-            lib/index.js, line 244
+            lib/index.js, line 271
         </div>
         
     </div>
@@ -1122,7 +1013,7 @@ token returned by last match.
     
         
         <div class="tag-source">
-            lib/index.js, line 328
+            lib/index.js, line 355
         </div>
         
     </div>
@@ -1247,7 +1138,7 @@ Lex.LexError}
     
         
         <div class="tag-source">
-            lib/index.js, line 112
+            lib/index.js, line 120
         </div>
         
     </div>
@@ -1380,7 +1271,7 @@ options object.</li>
     
         
         <div class="tag-source">
-            lib/index.js, line 192
+            lib/index.js, line 219
         </div>
         
     </div>
@@ -1460,7 +1351,7 @@ options object.</li>
     
         
         <div class="tag-source">
-            lib/index.js, line 172
+            lib/index.js, line 199
         </div>
         
     </div>
@@ -1581,7 +1472,7 @@ options object.</li>
     
         
         <div class="tag-source">
-            lib/index.js, line 205
+            lib/index.js, line 232
         </div>
         
     </div>
@@ -1708,7 +1599,7 @@ resolution first.</p>
     
         
         <div class="tag-source">
-            lib/index.js, line 220
+            lib/index.js, line 247
         </div>
         
     </div>
@@ -1833,7 +1724,7 @@ resolution first.</p>
     
         
         <div class="tag-source">
-            lib/index.js, line 123
+            lib/index.js, line 139
         </div>
         
     </div>
@@ -1938,6 +1829,17 @@ resolution first.</p>
     
 
 
+<h5>Returns:</h5>
+dex = require(&quot;dex&quot;);
+var lexer = dex.lexer();
+lexer.setRule(
+ dex.rule('root', function (rule) {
+   rule('word', /\w+);
+   rule('number', 'number');
+ })
+);
+<br />
+
     
     
     
@@ -1954,7 +1856,7 @@ resolution first.</p>
     
         
         <div class="tag-source">
-            lib/index.js, line 235
+            lib/index.js, line 262
         </div>
         
     </div>
@@ -2075,7 +1977,7 @@ resolution first.</p>
     
         
         <div class="tag-source">
-            lib/index.js, line 160
+            lib/index.js, line 187
         </div>
         
     </div>
@@ -2183,6 +2085,22 @@ resolution first.</p>
     
     
     
+        <h5>Example</h5>
+        
+
+    
+    <pre class="prettyprint"><code>var lexer = dex.lexer();
+lexer.setRule(dex.rule('root', function (rule) {
+  rule('start', function (rule) {
+    rule('space').match('hspace|vspace').skip();
+    rule('ident', /@\w+/);
+    rule('word', /\w+/);
+  });
+}));
+lexer.setState('start');</code></pre>
+    
+
+    
 </dd>
 
         </dl>
@@ -2202,7 +2120,7 @@ resolution first.</p>
     
         
         <div class="tag-source">
-            lib/index.js, line 376
+            lib/index.js, line 403
         </div>
         
     </div>
@@ -2408,7 +2326,7 @@ will be taken as tokens to be returned. Any other return is ignored.
     
         
         <div class="tag-source">
-            lib/index.js, line 404
+            lib/index.js, line 431
         </div>
         
     </div>
@@ -2898,7 +2816,7 @@ called on a match.</p></td>
         
 
         <footer>
-            Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.3.0-alpha11</a> on Tue Dec 09 2014 04:22:52 GMT+0000 (UTC)
+            Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.3.0-alpha11</a> on Thu Dec 11 2014 02:51:24 GMT+0000 (UTC)
         </footer>
     </div>
 </div>
